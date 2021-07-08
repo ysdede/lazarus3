@@ -25,7 +25,7 @@ class lazarus3(Strategy):
         self.osl = -53
         self.initialqty = 0
         self.exitcounter = 0
-        self.exitpoints = [0.02, 0.38]
+        self.exitpoints = [0.02, 0.58, 0.20, 0.20]
 
     def hyperparameters(self):
         return [
@@ -44,40 +44,38 @@ class lazarus3(Strategy):
         return ta.ema(self.candles, self.ewofast, sequential=True)
 
     @cached
-    def isdildo(self, index):
+    def is_dildo(self, index):
         open = self.candles[:, 1][index]
         close = self.candles[:, 2][index]
         return abs(open - close) * 100 / open > self.pumpsize / 10
 
     @property
     @cached
-    def dumpump(self):
+    def dump_pump(self):
         open = self.candles[:, 1][-self.pumplookback]
         close = self.candles[:, 2][-1]
         multibardildo = abs(open - close) * 100 / open > self.pumpsize / 10
-        return self.isdildo(-1) or self.isdildo(-2) or self.isdildo(-3) or self.isdildo(-4) or multibardildo
+        return self.is_dildo(-1) or self.is_dildo(-2) or self.is_dildo(-3) or self.is_dildo(-4) or multibardildo
 
     # Wavetrend funcs. -------------->
     @property
     @cached
     def wt(self):
-        return cta.wtsimple(self.candles, wtchannellen=9, wtaveragelen=12, wtmalen=3, oblevel=self.obl, oslevel=self.osl,
+        return cta.wtsimple(self.candles, wtchannellen=9, wtaveragelen=12, wtmalen=3,
+                            oblevel=self.obl, oslevel=self.osl,
                             source_type="close", sequential=True)
 
     @property
     def wt_crossed(self):
-        cr = utils.crossed(self.wt.wt1, self.wt.wt2, direction=None, sequential=False)
-        return cr
+        return utils.crossed(self.wt.wt1, self.wt.wt2, direction=None, sequential=False)
 
     @property
     def wt_cross_up(self):
-        up = self.wt.wt2[-1] - self.wt.wt1[-1] <= 0
-        return up
+        return self.wt.wtCrossUp[-1]
 
     @property
     def wt_cross_down(self):
-        dw = self.wt.wt2[-1] - self.wt.wt1[-1] >= 0
-        return dw
+        return self.wt.wtCrossDown[-1]
 
     @property
     def wt_oversold(self):
@@ -96,23 +94,21 @@ class lazarus3(Strategy):
         return self.wt_crossed and self.wt_cross_down and self.wt_overbought
     # END of Wavetrend funcs. <--------------
 
-
     def should_long(self) -> bool:
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dump_pump
 
     def should_short(self) -> bool:
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dump_pump
 
     @property
-    def calcqty(self):
+    def calc_qty(self):
         if self.incr and not self.lastwasprofitable and self.losecount <= self.hp['raiselimit']:
             return (self.capital / self.positionsize) * self.multiplier
-
         return self.capital / self.positionsize
 
     def go_long(self):
         sl = self.targetstop / 1000
-        qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
+        qty = utils.size_to_qty(self.calc_qty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.buy = qty, self.price
         self.stop_loss = qty, self.price - (self.price * sl)
@@ -121,7 +117,7 @@ class lazarus3(Strategy):
 
     def go_short(self):
         sl = self.targetstop / 1000
-        qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
+        qty = utils.size_to_qty(self.calc_qty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.sell = qty, self.price
         self.stop_loss = qty, self.price + (self.price * sl)
@@ -138,22 +134,22 @@ class lazarus3(Strategy):
             if self.is_long and self.wt_sell:
                 self.partial_liq()
 
-        if self.is_short and self.wt_buy:
-            self.partial_liq()
+            if self.is_short and self.wt_buy:
+                self.partial_liq()
 
         # c. Emergency exit! Close position at trend reversal
         if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
             self.liquidate()
 
-        # d. Raise bet
+        # d. Increase position. TODO: Update stoploss
         if self.increasepositionenabled:
             if self.is_long and self.wt_buy:
                 qty = utils.size_to_qty(self.capital / 15, self.price, fee_rate=self.fee_rate) * self.leverage
                 self.buy = qty, self.price
 
-        if self.is_short and self.wt_sell:
-            qty = utils.size_to_qty(self.capital / 15, self.price, fee_rate=self.fee_rate) * self.leverage
-            self.sell = qty, self.price
+            if self.is_short and self.wt_sell:
+                qty = utils.size_to_qty(self.capital / 15, self.price, fee_rate=self.fee_rate) * self.leverage
+                self.sell = qty, self.price
 
     # Partial Exit Func.
     def partial_liq(self):
@@ -161,8 +157,6 @@ class lazarus3(Strategy):
             if self.position.pnl > 0:
                 self.take_profit = self.initialqty * self.exitpoints[self.exitcounter], self.position.current_price
                 self.exitcounter += 1
-            # else:
-            #     self.stop_loss = qty * self.exitpoints[self.exitcounter], self.position.current_price
     # -----------------
 
     def on_stop_loss(self, order):
