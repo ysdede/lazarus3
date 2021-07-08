@@ -22,7 +22,7 @@ class lazarus3(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tunining
+            {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tuning
             {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
         ]
 
@@ -81,7 +81,7 @@ class lazarus3(Strategy):
         if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
             self.liquidate()
 
-        #     c. Emergency exit! Close position at trend reversal
+        # c. Emergency exit! Close position at trend reversal
         if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
             self.liquidate()
 
