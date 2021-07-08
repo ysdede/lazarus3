@@ -25,7 +25,7 @@ class lazarus3(Strategy):
         self.osl = -53
         self.initialqty = 0
         self.exitcounter = 0
-        self.exitpoints = [0.02, 0.58, 0.20, 0.20]
+        self.exitpoints = [0.10, 0.20, 0.30]
 
     def hyperparameters(self):
         return [
@@ -66,6 +66,7 @@ class lazarus3(Strategy):
                             source_type="close", sequential=True)
 
     @property
+    @cached
     def wt_crossed(self):
         return utils.crossed(self.wt.wt1, self.wt.wt2, direction=None, sequential=False)
 
