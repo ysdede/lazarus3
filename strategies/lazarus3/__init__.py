@@ -11,7 +11,7 @@ class lazarus3(Strategy):
         self.winlimit = 2
         self.lastwasprofitable = False
         self.multiplier = 1
-        self.positionsize = 10
+        self.positionsize = 8
         self.incr = True
         self.targetpnl = 296
         self.targetstop = 87
@@ -25,11 +25,11 @@ class lazarus3(Strategy):
         self.osl = -53
         self.initialqty = 0
         self.exitcounter = 0
-        self.exitpoints = [0.10, 0.20, 0.30]
+        self.exitpoints = [0.05, 0.35, 0.10]
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tunining
+            {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tuning
             {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
         ]
 
