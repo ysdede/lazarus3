@@ -2,6 +2,21 @@ from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
 
+# Timerange: 2021-02-01 2021-06-27
+# DNA       Profit %    Drowdown
+# sYon51`   47          -28
+# vXJp5._   100         -20
+# vXJp.._   109         -21
+# vdfp5.)   92.6        -32.3
+
+#           sYon51` vXJp5._ vXJp.._ vdfp5.) vaJpp;g
+# qtytorisk | 8     8       8       8       8
+# targetpnl | 258   253     253     310     296
+# stop      | 172   87      87      151     87
+# donchlen | 178    183     183     183     183
+# treshold | 33     33      26      33      93 (47?)
+# ewoshort | 4      3       3       3       6
+# ewolong | 42      41      41      21      44
 
 class lazarus3(Strategy):
     def __init__(self):
@@ -11,20 +26,27 @@ class lazarus3(Strategy):
         self.winlimit = 2
         self.lastwasprofitable = False
         self.multiplier = 1
-        self.positionsize = 10
         self.incr = True
+        self.positionsize = 8
         self.targetpnl = 296
         self.targetstop = 87
-        self.pumpsize = 47
+        self.donchianlen = 77
+        self.donchianfilterenabled = False
+        self.pumpsize = 47  # 47
         self.pumplookback = 3
         self.ewofast = 6
         self.ewoslow = 44
+        self.skipenabled = False  # If last trade was profitable, skip next trade
 
     def hyperparameters(self):
         return [
             {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tuning
             {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
         ]
+    @property
+    @cached
+    def entry_donchian(self):
+        return ta.donchian(self.candles, self.donchianlen, sequential=False)
 
     @property
     @cached
@@ -51,10 +73,16 @@ class lazarus3(Strategy):
         return self.isdildo(-1) or self.isdildo(-2) or self.isdildo(-3) or self.isdildo(-4) or multibardildo
 
     def should_long(self) -> bool:
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump
+        dc = True
+        if self.donchianfilterenabled:
+            dc = self.close >= self.entry_donchian[1]
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump and dc
 
     def should_short(self) -> bool:
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump
+        dc = True
+        if self.donchianfilterenabled:
+            dc = self.close <= self.entry_donchian[1]
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump and dc
 
     @property
     def calcqty(self):
@@ -96,6 +124,17 @@ class lazarus3(Strategy):
         self.wincount += 1
         self.losecount = 0
         self.multiplier = 1
+
+    def filters(self):
+        return [
+            self.skipfilter
+        ]
+
+    def skipfilter(self):
+        if self.skipenabled and self.lastwasprofitable:
+            self.lastwasprofitable = False
+            return False
+        return True
 
     def before(self):
         pass

@@ -1,0 +1,18 @@
+2018-01-01 --> 2021-07-01
+
+Incremental     Multip.     Limit   Donchian    Skipping        Pos.    Pump    Pump        Net.    DD%     Sharpe  Winning/Losing
+Pos. Size                           Filter      Enabled         Size    Size    Lookback    Profit%
+-----------+-----------+---------+-----------+---------------+-----------+-----------------+--------+---------+-----------------
+False           -           -       False       False           8       47      2           973     -19.99  1.93    124/307
+False           -           -       False       True            8       47      2           663     -21.62  1.85    96/238
+True            1.66        3       False       False           8       47      2           6572    -34.59  1.91    124/307
+True            1.66        3       False       True            8       47      2           16416   -28.47  2.32    96/238
+True            1.66        4       False       True            8       47      2           26889   -46-12  2.08    96/238
+True            1.66        4       False       False           8       47      2           56821   -41.61  2.21    124/307
+True            1.66        4       False       False           8       47      3           121376  -42-89  2.36    120/303
+True            1.66        4       False       False           8       -       -           22884   -50.19  1.92    136/338
+True            1.66        4       False       False           8       33      2           17700   -44.74  2.13    107/278
+True            1.55        4       False       False           8       47      2           27638   -35.33  2.24    124/307
+True            1.66        4       183         False           8       47      2           1350    -52.48  1.38    60/144
+True            1.66        4       77          False           8       47      2           13600   -40.18  1.99    85/172
+
