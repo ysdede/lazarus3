@@ -3,7 +3,7 @@ from jesse import utils
 import jesse.indicators as ta
 
 # Timerange: 2021-02-01 2021-06-27
-# DNA       Profit %    Drowdown
+# DNA       Profit %    Drawdown
 # sYon51`   47          -28
 # vXJp5._   100         -20
 # vXJp.._   109         -21
