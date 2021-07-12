@@ -40,8 +40,8 @@ class lazarus3(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 1, 'max': 38, 'default': 33},  # Multiplier fine tuning
-            {'name': 'raiselimit', 'type': int, 'min': 1, 'max': 6, 'default': 4},  # Limit
+            {'name': 'carpan', 'type': int, 'min': 5, 'max': 38, 'default': 33},  # Multiplier fine tuning
+            {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
         ]
 
     @property

@@ -1,328 +1,2122 @@
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 1431
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 65063
 [ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
     self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
     self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $53511 when your margin balance is $52562
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-05-31T06:00:00] process failed - ID: 1484
-[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
-    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
-    simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
-    r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
-    self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
-    self._execute_long()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
-    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
-    return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
-    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
-    order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
-    e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
-    raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $114145 when your margin balance is $89974
-
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 1512
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 65105
 [ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
     self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
     self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
 jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 1535
-[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
-    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
-    simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
-    r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
-    self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
-    self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
-    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
-    return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
-    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
-    order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
-    e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
-    raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $53511 when your margin balance is $52562
-
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 1632
-[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
-    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
-    simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
-    r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
-    self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
-    self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
-    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
-    return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
-    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
-    order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
-    e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
-    raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $53511 when your margin balance is $52562
-
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-05-31T06:00:00] process failed - ID: 1790
+[ERROR | 2018-05-31T06:00:00] process failed - ID: 65143
 [ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
     self._execute_long()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
     self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $93827 when your margin balance is $86798
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $109759 when your margin balance is $89309
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-05-31T06:00:00] process failed - ID: 1888
-[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
-    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
-    simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
-    r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
-    self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
-    self._execute_long()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
-    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
-    return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
-    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
-    order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
-    e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
-    raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $127977 when your margin balance is $91873
-
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-05-31T06:00:00] process failed - ID: 2120
-[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
-    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
-    simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
-    r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
-    self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
-    self._execute_long()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
-    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
-    return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
-    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
-    order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
-    e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
-    raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $118531 when your margin balance is $90567
-
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 2449
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 67335
 [ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
     self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
     self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $53511 when your margin balance is $52562
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-05-31T06:00:00] process failed - ID: 2523
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 67387
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 67345
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-05-31T06:00:00] process failed - ID: 67371
 [ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
     self._execute_long()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
     self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $93827 when your margin balance is $86798
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $148707 when your margin balance is $94513
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 2681
-[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
-    baby = self.mutate(baby)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+[ERROR | 2018-05-31T06:00:00] process failed - ID: 67441
+[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
-    self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
-    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
+    self._execute_long()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
+    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
-jesse.exceptions.InsufficientMargin: You cannot submit an order for $53511 when your margin balance is $52562
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $109759 when your margin balance is $89309
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
-[ERROR | 2018-03-06T12:00:00] process failed - ID: 2705
-[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
-    baby = self.mutate(baby)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+[ERROR | 2018-05-31T06:00:00] process failed - ID: 67435
+[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
     fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
     simulator(self.training_candles, hp)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
     r.strategy._execute()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
     self._check()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
-    self._execute_short()
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
-    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
+    self._execute_long()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
+    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
     return self.api.market_order(
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
     return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
     order = Order({
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
     e.on_order_submission(self)
-  File "/home/yunus/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $160065 when your margin balance is $95805
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 69689
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 69695
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
     raise InsufficientMargin(
 jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
 
-[ERROR | 2021-07-12T16:44:58] a process exited with exitcode: 1
+[ERROR | 2018-05-31T06:00:00] process failed - ID: 69615
+[ERROR | 2018-05-31T06:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 83, in get_fitness
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 653, in _check
+    self._execute_long()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 203, in _execute_long
+    self.broker.buy_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 53, in buy_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $101512 when your margin balance is $88010
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 76391
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 76357
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 76281
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 76369
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 89695
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 89584
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 89582
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 89637
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 93961
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 93899
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 93939
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 94003
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 98230
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 98290
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 102588
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 102621
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 102661
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 106947
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 111368
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 111392
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 111370
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116284
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116280
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116292
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116323
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116385
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116335
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 116377
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 120626
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 120602
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 124911
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 129385
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 129331
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 129339
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 129313
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 129349
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 133621
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 138004
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 138014
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 138000
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 142338
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 142298
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 142392
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 142266
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 146626
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 146624
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 146598
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 146550
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 150955
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 150900
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 150862
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 150866
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 155199
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 155217
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 155157
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 155147
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 159446
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 159476
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 163749
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $57068 when your margin balance is $52232
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 163770
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $61828 when your margin balance is $51629
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 163757
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $59366 when your margin balance is $51918
+
+[ERROR | 2018-03-06T12:00:00] process failed - ID: 163764
+[ERROR | 2018-03-06T12:00:00] Traceback (most recent call last):
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 236, in get_baby
+    baby = self.mutate(baby)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/Genetics.py", line 167, in mutate
+    fitness_score, fitness_log_training, fitness_log_testing = self.fitness(dna)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/optimize_mode/__init__.py", line 101, in fitness
+    simulator(self.training_candles, hp)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/modes/backtest_mode/__init__.py", line 312, in simulator
+    r.strategy._execute()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 845, in _execute
+    self._check()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 655, in _check
+    self._execute_short()
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/strategies/Strategy.py", line 340, in _execute_short
+    self.broker.sell_at_market(o[0], order_roles.OPEN_POSITION)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/broker.py", line 25, in sell_at_market
+    return self.api.market_order(
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/services/api.py", line 39, in market_order
+    return self.drivers[exchange].market_order(symbol, qty, current_price, side, role, flags)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/exchanges/sandbox/Sandbox.py", line 14, in market_order
+    order = Order({
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/Order.py", line 61, in __init__
+    e.on_order_submission(self)
+  File "/home/yunusseyhandede/.local/lib/python3.8/site-packages/jesse/models/FuturesExchange.py", line 122, in on_order_submission
+    raise InsufficientMargin(
+jesse.exceptions.InsufficientMargin: You cannot submit an order for $54660 when your margin balance is $52424
+
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
+[ERROR | 2021-07-12T19:51:35] a process exited with exitcode: 1
