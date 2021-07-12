@@ -1,6 +1,7 @@
 from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
+from optvars import cl
 
 # Timerange: 2021-02-01 2021-06-27
 # DNA       Profit %    Drawdown
@@ -17,6 +18,7 @@ import jesse.indicators as ta
 # treshold | 33     33      26      33      93 (47?)
 # ewoshort | 4      3       3       3       6
 # ewolong | 42      41      41      21      44
+
 
 class lazarus3(Strategy):
     def __init__(self):
@@ -40,9 +42,16 @@ class lazarus3(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 5, 'max': 38, 'default': 33},  # Multiplier fine tuning
-            {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
+            {'name': 'optindex', 'type': int, 'min': 0, 'max': 134, 'default': 96},  # Multiplier fine tuning
         ]
+
+    @property
+    def limit(self):
+        return cl[self.hp['optindex']][0]
+
+    @property
+    def carpan(self):
+        return cl[self.hp['optindex']][1]
 
     @property
     @cached
@@ -87,7 +96,7 @@ class lazarus3(Strategy):
 
     @property
     def calcqty(self):
-        if self.incr and not self.lastwasprofitable and self.losecount <= self.hp['raiselimit']:
+        if self.incr and not self.lastwasprofitable and self.losecount <= self.limit:
             return (self.capital / self.positionsize) * self.multiplier
 
         return self.capital / self.positionsize
@@ -118,7 +127,7 @@ class lazarus3(Strategy):
         self.lastwasprofitable = False
         self.losecount += 1
         self.wincount = 0
-        self.multiplier = self.multiplier * (1 + (self.hp['carpan']/50))
+        self.multiplier = self.multiplier * (1 + (self.carpan/50))
 
     def on_take_profit(self, order):
         self.lastwasprofitable = True
