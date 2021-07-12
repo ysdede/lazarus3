@@ -40,9 +40,10 @@ class lazarus3(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 10, 'max': 75, 'default': 66},  # Multiplier fine tuning
-            {'name': 'raiselimit', 'type': int, 'min': 1, 'max': 5, 'default': 4},  # Limit
+            {'name': 'carpan', 'type': int, 'min': 1, 'max': 38, 'default': 33},  # Multiplier fine tuning
+            {'name': 'raiselimit', 'type': int, 'min': 1, 'max': 6, 'default': 4},  # Limit
         ]
+
     @property
     @cached
     def entry_donchian(self):
@@ -117,7 +118,7 @@ class lazarus3(Strategy):
         self.lastwasprofitable = False
         self.losecount += 1
         self.wincount = 0
-        self.multiplier = self.multiplier * (1 + (self.hp['carpan']/100))
+        self.multiplier = self.multiplier * (1 + (self.hp['carpan']/50))
 
     def on_take_profit(self, order):
         self.lastwasprofitable = True
