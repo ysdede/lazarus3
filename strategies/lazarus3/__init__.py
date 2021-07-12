@@ -3,7 +3,7 @@ from jesse import utils
 import jesse.indicators as ta
 
 # Timerange: 2021-02-01 2021-06-27
-# DNA       Profit %    Drowdown
+# DNA       Profit %    Drawdown
 # sYon51`   47          -28
 # vXJp5._   100         -20
 # vXJp.._   109         -21
@@ -40,8 +40,8 @@ class lazarus3(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 5, 'max': 75, 'default': 66},  # Multiplier fine tuning
-            {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
+            {'name': 'carpan', 'type': int, 'min': 10, 'max': 75, 'default': 66},  # Multiplier fine tuning
+            {'name': 'raiselimit', 'type': int, 'min': 1, 'max': 5, 'default': 4},  # Limit
         ]
     @property
     @cached

@@ -1,0 +1,21 @@
+
+Best DNA candidates:
+
+
+ Rank   | DNA   | Training log || Testing log
+--------+-------+----------------------------------------------------------------------------------
+ 1      | -b    | win-rate: 23%, total: 193, PNL: 155.87% || win-rate: 38%, total: 34, PNL: 37.52%
+ 2      | 3j    | win-rate: 23%, total: 193, PNL: 170.44% || win-rate: 38%, total: 34, PNL: 38.82%
+ 3      | +j    | win-rate: 23%, total: 193, PNL: 150.36% || win-rate: 38%, total: 34, PNL: 38.87%
+ 4      | ,`    | win-rate: 23%, total: 193, PNL: 152.85% || win-rate: 38%, total: 34, PNL: 37.67%
+ 5      | )g    | win-rate: 23%, total: 193, PNL: 147.49% || win-rate: 38%, total: 34, PNL: 37.52%
+ 6      | )\    | win-rate: 23%, total: 193, PNL: 147.49% || win-rate: 38%, total: 34, PNL: 37.52%
+ 7      | (a    | win-rate: 23%, total: 193, PNL: 144.93% || win-rate: 38%, total: 34, PNL: 37.9%
+ 8      | (k    | win-rate: 23%, total: 193, PNL: 144.93% || win-rate: 38%, total: 34, PNL: 37.9%
+ 9      | 7`    | win-rate: 23%, total: 193, PNL: 179.69% || win-rate: 38%, total: 34, PNL: 38.71%
+ 10     | <]    | win-rate: 23%, total: 193, PNL: 192.31% || win-rate: 38%, total: 34, PNL: 39.39%
+ 11     | <a    | win-rate: 23%, total: 193, PNL: 192.31% || win-rate: 38%, total: 34, PNL: 39.39%
+ 12     | =`    | win-rate: 23%, total: 193, PNL: 195.81% || win-rate: 38%, total: 34, PNL: 38.99%
+ 13     | ?_    | win-rate: 23%, total: 193, PNL: 202.0% || win-rate: 38%, total: 34, PNL: 38.97%
+ 14     | @h    | win-rate: 23%, total: 193, PNL: 205.33% || win-rate: 38%, total: 34, PNL: 38.95%
+ 15     | *)    | win-rate: 23%, total: 193, PNL: 123.77% || win-rate: 38%, total: 34, PNL: 39.6%

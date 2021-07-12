@@ -76,3 +76,5 @@ fabric.properties
 *.pyc
 __pycache__/
 .idea/
+storage/temp
+storage/temp/*

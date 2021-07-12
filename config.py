@@ -6,7 +6,7 @@ config = {
     # PostgreSQL is used as the database to store data such as candles.
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
     'databases': {
-        'postgres_host': '127.0.0.1',
+        'postgres_host': '192.168.1.25',
         'postgres_name': 'jesse_db',
         'postgres_port': 5432,
         'postgres_username': 'jesse_user',
@@ -34,7 +34,7 @@ config = {
     'exchanges': {
         # https://www.bitfinex.com
         'Bitfinex': {
-            'fee': 0.002,
+            'fee': 0.0004,
 
             # backtest mode only: accepted are 'spot' and 'futures'
             # 'spot' support is currently very limited - you can use 'futures' with leverage 1 for now
