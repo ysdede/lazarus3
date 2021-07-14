@@ -3,22 +3,6 @@ from jesse import utils
 import jesse.indicators as ta
 from optvars import cl
 
-# Timerange: 2021-02-01 2021-06-27
-# DNA       Profit %    Drawdown
-# sYon51`   47          -28
-# vXJp5._   100         -20
-# vXJp.._   109         -21
-# vdfp5.)   92.6        -32.3
-
-#           sYon51` vXJp5._ vXJp.._ vdfp5.) vaJpp;g
-# qtytorisk | 8     8       8       8       8
-# targetpnl | 258   253     253     310     296
-# stop      | 172   87      87      151     87
-# donchlen | 178    183     183     183     183
-# treshold | 33     33      26      33      93 (47?)
-# ewoshort | 4      3       3       3       6
-# ewolong | 42      41      41      21      44
-
 
 class lazarus3(Strategy):
     def __init__(self):
@@ -34,10 +18,10 @@ class lazarus3(Strategy):
 
         #                                                                          2021-05-01 2021-07-13
         self.positionsize, self.targetpnl, self.targetstop, self.donchianlen, self.pumpsize, self.ewofast, self.ewoslow, self.pumplookback = \
-        8, 296, 87, 183, 47, 6, 44, 3     # vaJpC;g   +   2.58    92.98   6.07    %96.65  %-29.14
+        8, 296, 87, 183, 47, 6, 44, 3       # vaJpC;g   +   2.58    92.98   6.07    %96.65  %-29.14
         # 8, 253, 87, 183, 26, 3, 41, 3     # vXJp.._   +   3.48    156.66  11.19   %103.69 %-20.69
-        # 8, 243, 87, 25, 30, 3, 41, 3    # vVJ/2._   +   3.32    144.8   10.74   %102.34 %-21.64
-        # 8, 281, 87, 183, 50, 4, 39, 3   # Z^JpF/Y   +   2.98    123.77  7.6     %99.78  %-23.73
+        # 8, 243, 87, 25, 30, 3, 41, 3      # vVJ/2._   +   3.32    144.8   10.74   %102.34 %-21.64
+        # 8, 281, 87, 183, 50, 4, 39, 3     # Z^JpF/Y   +   2.98    123.77  7.6     %99.78  %-23.73
         # 8, 372, 172, 183, 63, 3, 40, 3    # vqopR,]   +   2.43    41.57   4.5
         # 8, 258, 128, 178, 33, 4, 42, 3    # vY\n51`   +   2.64    53.78   5.95    %75.75  %-28.15
         # 8, 296, 103, 183, 54, 6, 44, 3    # vaQpJ;g
@@ -48,7 +32,6 @@ class lazarus3(Strategy):
         # 8, 310, 151, 183, 33, 3, 21, 3    # vdfp5.)   -   2.46    44.74   4.52    %66.18  %-25.14
         # 8, 258, 172, 178, 33, 4, 42, 3    # sYon51`   +   2.64    53.78   5.95    %75.75  %-28.15
         # 8, 253, 87, 183, 33, 3, 41, 3     # vXJp5._   +   3.15    99.97   7.56    %95.77  %-26.48
-
 
     def hyperparameters(self):
         return [
