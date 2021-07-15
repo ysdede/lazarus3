@@ -39,6 +39,8 @@ def is_active_symbol(exchange, symbol):
            and (('active' not in exchange.markets[symbol]) or (exchange.markets[symbol]['active']))
 
 
+print(f'Importing {exch} candles...')
+
 for s in exchange.symbols:
     if is_active_symbol(exchange, s):
         symb = s.replace('/', '-')
