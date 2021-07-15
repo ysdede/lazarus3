@@ -12,11 +12,11 @@ class lazarus3(Strategy):
         self.winlimit = 2
         self.lastwasprofitable = False
         self.multiplier = 1
-        self.incr = True
+        self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
-        self.skipenabled = False  # If last trade was profitable, skip next trade
+        self.skipenabled = False    # If last trade was profitable, skip next trade
 
-        #                                                                          2021-05-01 2021-07-13
+        # Test period: 2021-05-01 2021-07-13 - Bitfinex BTC-USD 5x Lev. w/ Binance fee rate
         self.positionsize, self.targetpnl, self.targetstop, self.donchianlen, self.pumpsize, self.ewofast, self.ewoslow, self.pumplookback = \
         8, 296, 87, 183, 47, 6, 44, 3       # vaJpC;g   +   2.58    92.98   6.07    %96.65  %-29.14
         # 8, 253, 87, 183, 26, 3, 41, 3     # vXJp.._   +   3.48    156.66  11.19   %103.69 %-20.69
