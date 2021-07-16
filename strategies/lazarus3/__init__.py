@@ -18,7 +18,7 @@ class lazarus3(Strategy):
 
         # Test period: 2021-05-01 2021-07-13 - Bitfinex BTC-USD 5x Lev. w/ Binance fee rate
         self.positionsize, self.targetpnl, self.targetstop, self.donchianlen, self.pumpsize, self.ewofast, self.ewoslow, self.pumplookback = \
-            24, 296, 87, 183, 47, 6, 44, 3      # vaJpC;g   +   2.58    92.98   6.07    %96.65  %-29.14
+            16, 296, 87, 183, 47, 6, 44, 3      # vaJpC;g   +   2.58    92.98   6.07    %96.65  %-29.14
         # 8, 253, 87, 183, 26, 3, 41, 3     # vXJp.._   +   3.48    156.66  11.19   %103.69 %-20.69
         # 8, 243, 87, 25, 30, 3, 41, 3      # vVJ/2._   +   3.32    144.8   10.74   %102.34 %-21.64
         # 8, 281, 87, 183, 50, 4, 39, 3     # Z^JpF/Y   +   2.98    123.77  7.6     %99.78  %-23.73

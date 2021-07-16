@@ -18,7 +18,7 @@ print('CCXT Version:', ccxt.__version__)
 # exch, exchccxt = 'Binance Futures', 'future'
 exch, exchccxt = 'Binance', 'spot'
 
-sd = '2017-01-01'   # Start date
+sd = '2021-01-01'   # Start date
 skc = True          # Skip confirmation
 
 exchange = ccxt.binance({
@@ -35,16 +35,19 @@ exchange.verbose = True  # UNCOMMENT THIS AFTER LOADING THE MARKETS FOR DEBUGGIN
 
 
 def is_active_symbol(exchange, symbol):
-    return ((symbol.endswith('USDT') or symbol.endswith('BUSD')) and '.' not in symbol)\
-           and (('active' not in exchange.markets[symbol]) or (exchange.markets[symbol]['active']))
+    return 'UP/' not in symbol and 'DOWN/' not in symbol and (symbol.endswith('USDT')) and '.' not in symbol\
+           and (('active' not in exchange.markets[symbol]) or (exchange.markets[symbol]['active']))\
+            and 'BTCST' not in symbol and 'COCOS' not in symbol and 'CVC' not in symbol and 'DREP' not in symbol\
+            and symbol.startswith('E')
 
 
-print(f'Importing {exch} candles...')
+print(f'Importing {exch} candles... Start date: {sd}')
+print('-'*30)
 
 for s in exchange.symbols:
     if is_active_symbol(exchange, s):
         symb = s.replace('/', '-')
-        print(symb)
+        print(exch, symb)
         import_candles_mode.run(exch, symb, sd, skc)
 
 db.close_connection()
