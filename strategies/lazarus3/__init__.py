@@ -19,7 +19,7 @@ class lazarus3(Strategy):
         self.pumplookback = 3
         self.ewofast = 6
         self.ewoslow = 44
-        self.partialexitenabled = False
+        self.partialexitenabled = True
         self.increasepositionenabled = False
         self.obl = 53
         self.osl = -53
@@ -61,7 +61,7 @@ class lazarus3(Strategy):
     @property
     @cached
     def wt(self):
-        return cta.wtsimple(self.candles, wtchannellen=9, wtaveragelen=12, wtmalen=3,
+        return ta.wt(self.candles, wtchannellen=9, wtaveragelen=12, wtmalen=3,
                             oblevel=self.obl, oslevel=self.osl,
                             source_type="close", sequential=True)
 
