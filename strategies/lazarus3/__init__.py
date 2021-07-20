@@ -2,23 +2,8 @@ from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
 
-# Timerange: 2021-02-01 2021-06-27
-# DNA       Profit %    Drawdown
-# sYon51`   47          -28
-# vXJp5._   100         -20
-# vXJp.._   109         -21
-# vdfp5.)   92.6        -32.3
 
-#           sYon51` vXJp5._ vXJp.._ vdfp5.) vaJpp;g
-# qtytorisk | 8     8       8       8       8
-# targetpnl | 258   253     253     310     296
-# stop      | 172   87      87      151     87
-# donchlen | 178    183     183     183     183
-# treshold | 33     33      26      33      93 (47?)
-# ewoshort | 4      3       3       3       6
-# ewolong | 42      41      41      21      44
-
-class lazarus3(Strategy):
+class lazarus32(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -26,23 +11,77 @@ class lazarus3(Strategy):
         self.winlimit = 2
         self.lastwasprofitable = False
         self.multiplier = 1
-        self.incr = True
-        self.positionsize = 8
-        self.targetpnl = 296
-        self.targetstop = 87
-        self.donchianlen = 77
+        self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
-        self.pumpsize = 47  # 47
-        self.pumplookback = 3
-        self.ewofast = 6
-        self.ewoslow = 44
-        self.skipenabled = False  # If last trade was profitable, skip next trade
+        self.skipenabled = False    # If last trade was profitable, skip next trade
+
+        self.dnas = {
+            1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
+            2: {"dna": 'vaJpp;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 93, "fast": 6, "slow": 44},
+            3: {"dna": 'vXJp.._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 26, "fast": 3, "slow": 41},
+            4: {"dna": 'vXJp5._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 33, "fast": 3, "slow": 41},
+            5: {"dna": 'sYon51`', "tpnl": 258, "tstop": 172, "donlen": 178, "pmpsize": 33, "fast": 4, "slow": 42},
+            6: {"dna": 'vdfp5.)', "tpnl": 310, "tstop": 151, "donlen": 183, "pmpsize": 33, "fast": 3, "slow": 21},
+            7: {"dna": 'v^JpF/g', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 44},
+            8: {"dna": 'vY\\n51`', "tpnl": 258, "tstop": 128, "donlen": 178, "pmpsize": 33, "fast": 4, "slow": 42},
+            9: {"dna": 'Z^JpF/Y', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 39},
+            10: {"dna": 'kd9?;1H', "tpnl": 310, "tstop": 49, "donlen": 64, "pmpsize": 39, "fast": 4, "slow": 33},
+            11: {"dna": 'vdfp5@l', "tpnl": 310, "tstop": 151, "donlen": 183, "pmpsize": 33, "fast": 7, "slow": 46},
+            12: {"dna": 'vdds59l', "tpnl": 310, "tstop": 147, "donlen": 190, "pmpsize": 33, "fast": 6, "slow": 46},
+            13: {"dna": 'vVJ/2._', "tpnl": 243, "tstop": 87, "donlen": 25, "pmpsize": 30, "fast": 3, "slow": 41},
+            14: {"dna": 'vN3BO,f', "tpnl": 205, "tstop": 35, "donlen": 71, "pmpsize": 59, "fast": 3, "slow": 44},
+            15: {"dna": 'vdos5>l', "tpnl": 310, "tstop": 172, "donlen": 190, "pmpsize": 33, "fast": 7, "slow": 46},
+            16: {"dna": 'vj3?o1l', "tpnl": 338, "tstop": 35, "donlen": 64, "pmpsize": 92, "fast": 4, "slow": 46},
+            17: {"dna": 'vqopR,]', "tpnl": 372, "tstop": 172, "donlen": 183, "pmpsize": 63, "fast": 3, "slow": 40},
+            18: {"dna": 'vaQpJ;g', "tpnl": 296, "tstop": 103, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
+            19: {"dna": 'v^JpF/U', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 38},
+            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
+        }
 
     def hyperparameters(self):
         return [
-            {'name': 'carpan', 'type': int, 'min': 5, 'max': 38, 'default': 33},  # Multiplier fine tuning
-            {'name': 'raiselimit', 'type': int, 'min': 2, 'max': 5, 'default': 4},  # Limit
+            {'name': 'dnaindex', 'type': int, 'min': 1, 'max': 20, 'default': 1}
         ]
+
+    @property
+    def targetpnl(self):
+        return self.dnas[self.hp['dnaindex']]['tpnl']
+
+    @property
+    def targetstop(self):
+        return self.dnas[self.hp['dnaindex']]['tstop']
+
+    @property
+    def donchianlen(self):
+        return self.dnas[self.hp['dnaindex']]['donlen']
+
+    @property
+    def pumpsize(self):
+        return self.dnas[self.hp['dnaindex']]['pmpsize']
+
+    @property
+    def ewofast(self):
+        return self.dnas[self.hp['dnaindex']]['fast']
+
+    @property
+    def ewoslow(self):
+        return self.dnas[self.hp['dnaindex']]['slow']
+
+    @property
+    def limit(self):
+        return 4
+
+    @property
+    def carpan(self):
+        return 33
+
+    @property
+    def pumplookback(self):
+        return 3
+
+    @property
+    def positionsize(self):
+        return 8
 
     @property
     @cached
@@ -87,7 +126,7 @@ class lazarus3(Strategy):
 
     @property
     def calcqty(self):
-        if self.incr and not self.lastwasprofitable and self.losecount <= self.hp['raiselimit']:
+        if self.incr and not self.lastwasprofitable and self.losecount <= self.limit:
             return (self.capital / self.positionsize) * self.multiplier
 
         return self.capital / self.positionsize
@@ -118,7 +157,7 @@ class lazarus3(Strategy):
         self.lastwasprofitable = False
         self.losecount += 1
         self.wincount = 0
-        self.multiplier = self.multiplier * (1 + (self.hp['carpan']/50))
+        self.multiplier = self.multiplier * (1 + (self.carpan/50))
 
     def on_take_profit(self, order):
         self.lastwasprofitable = True
