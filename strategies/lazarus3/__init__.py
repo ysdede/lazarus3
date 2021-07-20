@@ -14,6 +14,7 @@ class lazarus3(Strategy):
         self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
+        self.dnaindex = 1
 
         self.dnas = {
             1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
@@ -38,34 +39,29 @@ class lazarus3(Strategy):
             20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
         }
 
-    def hyperparameters(self):
-        return [
-            {'name': 'dnaindex', 'type': int, 'min': 1, 'max': 20, 'default': 1}
-        ]
-
     @property
     def targetpnl(self):
-        return self.dnas[self.hp['dnaindex']]['tpnl']
+        return self.dnas[self.dnaindex]['tpnl']
 
     @property
     def targetstop(self):
-        return self.dnas[self.hp['dnaindex']]['tstop']
+        return self.dnas[self.dnaindex]['tstop']
 
     @property
     def donchianlen(self):
-        return self.dnas[self.hp['dnaindex']]['donlen']
+        return self.dnas[self.dnaindex]['donlen']
 
     @property
     def pumpsize(self):
-        return self.dnas[self.hp['dnaindex']]['pmpsize']
+        return self.dnas[self.dnaindex]['pmpsize']
 
     @property
     def ewofast(self):
-        return self.dnas[self.hp['dnaindex']]['fast']
+        return self.dnas[self.dnaindex]['fast']
 
     @property
     def ewoslow(self):
-        return self.dnas[self.hp['dnaindex']]['slow']
+        return self.dnas[self.dnaindex]['slow']
 
     @property
     def limit(self):
