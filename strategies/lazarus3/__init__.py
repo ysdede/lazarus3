@@ -3,7 +3,7 @@ from jesse import utils
 import jesse.indicators as ta
 
 
-class lazarus32(Strategy):
+class lazarus3(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
