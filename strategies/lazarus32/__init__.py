@@ -1,7 +1,6 @@
 from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
-from optvars import cl
 
 
 class lazarus32(Strategy):
@@ -41,8 +40,7 @@ class lazarus32(Strategy):
 
     def hyperparameters(self):
         return [
-            {'name': 'dnaindex', 'type': int, 'min': 1, 'max': 20, 'default': 10}
-            # {'name': 'optindex', 'type': int, 'min': 0, 'max': 134, 'default': 96},  # Multiplier fine tuning
+            {'name': 'dnaindex', 'type': int, 'min': 1, 'max': 20, 'default': 1}
         ]
 
     @property
@@ -71,11 +69,11 @@ class lazarus32(Strategy):
 
     @property
     def limit(self):
-        return 4  # cl[self.hp['optindex']][0]
+        return 4
 
     @property
     def carpan(self):
-        return 33  # cl[self.hp['optindex']][1]
+        return 33
 
     @property
     def pumplookback(self):
@@ -84,7 +82,6 @@ class lazarus32(Strategy):
     @property
     def positionsize(self):
         return 8
-
 
     @property
     @cached
