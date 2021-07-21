@@ -1,6 +1,7 @@
 from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
+from jesse.services.selectors import get_all_trading_routes
 
 
 class lazarus3(Strategy):
@@ -76,8 +77,10 @@ class lazarus3(Strategy):
         return 3
 
     @property
+    @cached
     def positionsize(self):
-        return 8
+        routeslens = len(get_all_trading_routes())
+        return 8 * routeslens
 
     @property
     @cached
