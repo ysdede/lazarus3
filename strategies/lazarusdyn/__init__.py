@@ -13,20 +13,20 @@ class lazarusdyn(Strategy):
         self.lastwasprofitable = False
         self.targetprice = 0
         self.multiplier = 1
-        self.incr = True            # Martingale like aggressive position sizing.
-        self.donchianfilterenabled = False
+        self.incr = False            # Martingale like aggressive position sizing.
+        self.donchianfilterenabled = True
         self.skipenabled = False    # If last trade was profitable, skip next trade
         self.dnaindex = 1
 
     def hyperparameters(self):
         return [
-            {'name': 'atrlen', 'type': int, 'min': 6, 'max': 48, 'default': 14},
+            # {'name': 'atrlen', 'type': int, 'min': 6, 'max': 48, 'default': 14},
             {'name': 'atrpnl', 'type': int, 'min': 10, 'max': 110, 'default': 20},  # = atrpnl/10, 20.1
             {'name': 'atrstop', 'type': int, 'min': 5, 'max': 52, 'default': 10},   # = atrstop/10, 5.1
-            # {'name': 'donchlen', 'type': int, 'min': 8, 'max': 200, 'default': 183},     # Donchian Channel Len.
+            {'name': 'donchlen', 'type': int, 'min': 2, 'max': 200, 'default': 77},     # Donchian Channel Len.
             {'name': 'pmpsize', 'type': int, 'min': 10, 'max': 50, 'default': 47},    # /10
-            {'name': 'fast', 'type': int, 'min': 3, 'max': 8, 'default': 6},
-            {'name': 'slow', 'type': int, 'min': 20, 'max': 48, 'default': 44},
+            {'name': 'fast', 'type': int, 'min': 2, 'max': 8, 'default': 3},
+            {'name': 'slow', 'type': int, 'min': 20, 'max': 48, 'default': 41},
             # {'name': 'clindex', 'type': int, 'min': 0, 'max': 134, 'default': 96},
 
         ]
@@ -69,7 +69,7 @@ class lazarusdyn(Strategy):
 
     @property
     def atrlen(self):
-        return self.hp['atrlen']
+        return 20  # self.hp['atrlen']
 
     @property
     @cached
