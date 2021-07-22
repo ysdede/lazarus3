@@ -79,3 +79,4 @@ __pycache__/
 storage/temp
 storage/temp/*
 /storage/logs/
+/storage/logs/

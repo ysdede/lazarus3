@@ -14,19 +14,19 @@ class lazarusdyn(Strategy):
         self.targetprice = 0
         self.multiplier = 1
         self.incr = False            # Martingale like aggressive position sizing.
-        self.donchianfilterenabled = True
+        self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
         self.dnaindex = 1
 
     def hyperparameters(self):
         return [
-            # {'name': 'atrlen', 'type': int, 'min': 6, 'max': 48, 'default': 14},
-            {'name': 'atrpnl', 'type': int, 'min': 10, 'max': 110, 'default': 20},  # = atrpnl/10, 20.1
-            {'name': 'atrstop', 'type': int, 'min': 5, 'max': 52, 'default': 10},   # = atrstop/10, 5.1
-            {'name': 'donchlen', 'type': int, 'min': 2, 'max': 200, 'default': 77},     # Donchian Channel Len.
-            {'name': 'pmpsize', 'type': int, 'min': 10, 'max': 50, 'default': 47},    # /10
-            {'name': 'fast', 'type': int, 'min': 2, 'max': 8, 'default': 3},
-            {'name': 'slow', 'type': int, 'min': 20, 'max': 48, 'default': 41},
+            {'name': 'atrlen', 'type': int, 'min': 5, 'max': 120, 'default': 14},
+            {'name': 'atrpnl', 'type': int, 'min': 10, 'max': 220, 'default': 201},  # = atrpnl/10, 20.1
+            {'name': 'atrstop', 'type': int, 'min': 5, 'max': 60, 'default': 51},   # = atrstop/10, 5.1
+            # {'name': 'donchlen', 'type': int, 'min': 2, 'max': 200, 'default': 77},     # Donchian Channel Len.
+            # {'name': 'pmpsize', 'type': int, 'min': 10, 'max': 50, 'default': 47},    # /10
+            # {'name': 'fast', 'type': int, 'min': 2, 'max': 8, 'default': 6},
+            # {'name': 'slow', 'type': int, 'min': 20, 'max': 48, 'default': 44},
             # {'name': 'clindex', 'type': int, 'min': 0, 'max': 134, 'default': 96},
 
         ]
@@ -40,20 +40,24 @@ class lazarusdyn(Strategy):
         return self.hp['atrstop'] / 10
 
     @property
+    def atrlen(self):
+        return self.hp['atrlen']
+
+    @property
     def donchianlen(self):
-        return self.hp['donchlen']
+        return 77  # self.hp['donchlen']
 
     @property
     def pumpsize(self):
-        return self.hp['pmpsize']
+        return 47  # .hp['pmpsize']
 
     @property
     def ewofast(self):
-        return self.hp['fast']
+        return 6  # self.hp['fast']
 
     @property
     def ewoslow(self):
-        return self.hp['slow']
+        return 44  # self.hp['slow']
 
     @property
     def limit(self):
@@ -67,9 +71,6 @@ class lazarusdyn(Strategy):
     def pumplookback(self):
         return 3
 
-    @property
-    def atrlen(self):
-        return 20  # self.hp['atrlen']
 
     @property
     @cached
