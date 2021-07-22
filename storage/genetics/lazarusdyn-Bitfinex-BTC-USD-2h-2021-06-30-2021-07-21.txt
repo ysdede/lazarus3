@@ -1,0 +1,34 @@
+
+
+# iteration 100
+
+1 ==  .VdOIL2  ==  1.5817023391060518  ==  win-rate: 71 %, total: 7, PNL: 7.71 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+2 ==  (s94Sgn  ==  1.5573725038625903  ==  win-rate: 70 %, total: 10, PNL: 3.5 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+3 ==  (wjH(cQ  ==  1.4861357995446387  ==  win-rate: 77 %, total: 9, PNL: 3.18 % || win-rate: 0 %, total: 1, PNL: -1.26 %
+4 ==  ,1->k9)  ==  1.401277802345744  ==  win-rate: 71 %, total: 7, PNL: 5.57 % || win-rate: None %, total: None, PNL: None %
+5 ==  -v=94W>  ==  1.2766928415681835  ==  win-rate: 62 %, total: 8, PNL: 5.85 % || win-rate: 0 %, total: 1, PNL: -0.81 %
+6 ==  +2HAicP  ==  1.2184379168953496  ==  win-rate: 66 %, total: 9, PNL: 4.21 % || win-rate: None %, total: None, PNL: None %
+7 ==  ,GU(8W?  ==  1.1480390009982022  ==  win-rate: 45 %, total: 11, PNL: 5.33 % || win-rate: 0 %, total: 2, PNL: -1.2 %
+8 ==  *3u>FNM  ==  1.0777919767209523  ==  win-rate: 54 %, total: 11, PNL: 5.58 % || win-rate: 0 %, total: 1, PNL: -0.78 %
+9 ==  )H7A7Tj  ==  1.0260506932200752  ==  win-rate: 62 %, total: 8, PNL: 2.87 % || win-rate: 0 %, total: 1, PNL: -0.81 %
+10 ==  )SM4G\V  ==  0.9931098615406815  ==  win-rate: 45 %, total: 11, PNL: 4.35 % || win-rate: 0 %, total: 1, PNL: -0.78 %
+11 ==  *lh]D.W  ==  0.9081774354413297  ==  win-rate: 83 %, total: 6, PNL: 3.31 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+12 ==  ucI0=`W  ==  0.9027547824847006  ==  win-rate: 42 %, total: 7, PNL: 7.11 % || win-rate: 0 %, total: 1, PNL: -0.78 %
+13 ==  *,9JV1N  ==  0.892788379910668  ==  win-rate: 55 %, total: 9, PNL: 2.55 % || win-rate: 0 %, total: 1, PNL: -0.55 %
+14 ==  jGP,)]3  ==  0.8881200506743029  ==  win-rate: 50 %, total: 10, PNL: 4.99 % || win-rate: 0 %, total: 3, PNL: -2.4 %
+15 ==  :91+GGW  ==  0.8363881001334388  ==  win-rate: 25 %, total: 8, PNL: 7.61 % || win-rate: 0 %, total: 1, PNL: -0.85 %
+16 ==  (.JCXOk  ==  0.8274440067362993  ==  win-rate: 54 %, total: 11, PNL: 3.8 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+17 ==  RL`OON5  ==  0.8131719551601881  ==  win-rate: 28 %, total: 7, PNL: 9.98 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+18 ==  vINEP`[  ==  0.7721698815618866  ==  win-rate: 28 %, total: 7, PNL: 8.24 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+19 ==  5?N63gE  ==  0.7531379584390454  ==  win-rate: 37 %, total: 8, PNL: 3.54 % || win-rate: 0 %, total: 2, PNL: -1.13 %
+20 ==  Li\,7/i  ==  0.7367963794075438  ==  win-rate: 44 %, total: 9, PNL: 3.54 % || win-rate: 0 %, total: 2, PNL: -1.2 %
+21 ==  VGR(7Da  ==  0.7222478048968529  ==  win-rate: 44 %, total: 9, PNL: 3.47 % || win-rate: 0 %, total: 2, PNL: -1.2 %
+22 ==  Xfc@,=^  ==  0.6808178459779062  ==  win-rate: 66 %, total: 6, PNL: 2.92 % || win-rate: 0 %, total: 1, PNL: -0.81 %
+23 ==  Ntp09C@  ==  0.6714067821519595  ==  win-rate: 50 %, total: 8, PNL: 3.24 % || win-rate: 0 %, total: 1, PNL: -0.78 %
+24 ==  []P776v  ==  0.6619333555436657  ==  win-rate: 50 %, total: 8, PNL: 3.99 % || win-rate: 0 %, total: 1, PNL: -0.78 %
+25 ==  P`Q>-V)  ==  0.6485981437800995  ==  win-rate: 66 %, total: 6, PNL: 3.08 % || win-rate: 0 %, total: 1, PNL: -0.81 %
+26 ==  ur/,+67  ==  0.6479627592291524  ==  win-rate: 50 %, total: 10, PNL: 2.49 % || win-rate: 0 %, total: 3, PNL: -2.4 %
+27 ==  <Y+JLrY  ==  0.6468144466126869  ==  win-rate: 33 %, total: 6, PNL: 3.21 % || win-rate: 0 %, total: 1, PNL: -0.7 %
+28 ==  (cUt29u  ==  0.6465264755220929  ==  win-rate: 83 %, total: 6, PNL: 2.21 % || win-rate: 0 %, total: 1, PNL: -0.67 %
+29 ==  FHT1MNB  ==  0.6425872596697015  ==  win-rate: 25 %, total: 8, PNL: 9.19 % || win-rate: 0 %, total: 1, PNL: -0.85 %
+30 ==  bAh35^1  ==  0.6327515755588663  ==  win-rate: 50 %, total: 8, PNL: 3.86 % || win-rate: 0 %, total: 1, PNL: -0.69 %

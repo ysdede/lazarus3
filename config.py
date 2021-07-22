@@ -10,7 +10,7 @@ config = {
         'postgres_name': 'jesse_db',
         'postgres_port': 5432,
         'postgres_username': 'jesse_user',
-        'postgres_password': 'password',
+        'postgres_password': 'password@€',
     },
 
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -186,7 +186,7 @@ config = {
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
     'optimization': {
         # sharpe, calmar, sortino, omega
-        'ratio': 'sharpe',
+        'ratio': 'calmar',
     },
 
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

@@ -2,85 +2,85 @@ from jesse.strategies import Strategy, cached
 from jesse import utils
 import jesse.indicators as ta
 from jesse.services.selectors import get_all_trading_routes
+from optvars import cl
 
-
-class lazarus3(Strategy):
+class lazarusdyn(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
         self.wincount = 0
         self.winlimit = 2
         self.lastwasprofitable = False
+        self.targetprice = 0
         self.multiplier = 1
         self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
         self.dnaindex = 1
 
-        self.dnas = {
-            1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
-            2: {"dna": 'vaJpp;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 93, "fast": 6, "slow": 44},
-            3: {"dna": 'vXJp.._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 26, "fast": 3, "slow": 41},
-            4: {"dna": 'vXJp5._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 33, "fast": 3, "slow": 41},
-            5: {"dna": 'sYon51`', "tpnl": 258, "tstop": 172, "donlen": 178, "pmpsize": 33, "fast": 4, "slow": 42},
-            6: {"dna": 'vdfp5.)', "tpnl": 310, "tstop": 151, "donlen": 183, "pmpsize": 33, "fast": 3, "slow": 21},
-            7: {"dna": 'v^JpF/g', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 44},
-            8: {"dna": 'vY\\n51`', "tpnl": 258, "tstop": 128, "donlen": 178, "pmpsize": 33, "fast": 4, "slow": 42},
-            9: {"dna": 'Z^JpF/Y', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 39},
-            10: {"dna": 'kd9?;1H', "tpnl": 310, "tstop": 49, "donlen": 64, "pmpsize": 39, "fast": 4, "slow": 33},
-            11: {"dna": 'vdfp5@l', "tpnl": 310, "tstop": 151, "donlen": 183, "pmpsize": 33, "fast": 7, "slow": 46},
-            12: {"dna": 'vdds59l', "tpnl": 310, "tstop": 147, "donlen": 190, "pmpsize": 33, "fast": 6, "slow": 46},
-            13: {"dna": 'vVJ/2._', "tpnl": 243, "tstop": 87, "donlen": 25, "pmpsize": 30, "fast": 3, "slow": 41},
-            14: {"dna": 'vN3BO,f', "tpnl": 205, "tstop": 35, "donlen": 71, "pmpsize": 59, "fast": 3, "slow": 44},
-            15: {"dna": 'vdos5>l', "tpnl": 310, "tstop": 172, "donlen": 190, "pmpsize": 33, "fast": 7, "slow": 46},
-            16: {"dna": 'vj3?o1l', "tpnl": 338, "tstop": 35, "donlen": 64, "pmpsize": 92, "fast": 4, "slow": 46},
-            17: {"dna": 'vqopR,]', "tpnl": 372, "tstop": 172, "donlen": 183, "pmpsize": 63, "fast": 3, "slow": 40},
-            18: {"dna": 'vaQpJ;g', "tpnl": 296, "tstop": 103, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
-            19: {"dna": 'v^JpF/U', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 38},
-            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
-        }
+    def hyperparameters(self):
+        return [
+            {'name': 'atrlen', 'type': int, 'min': 6, 'max': 48, 'default': 14},
+            {'name': 'atrpnl', 'type': int, 'min': 10, 'max': 110, 'default': 20},  # = atrpnl/10, 20.1
+            {'name': 'atrstop', 'type': int, 'min': 5, 'max': 52, 'default': 10},   # = atrstop/10, 5.1
+            # {'name': 'donchlen', 'type': int, 'min': 8, 'max': 200, 'default': 183},     # Donchian Channel Len.
+            {'name': 'pmpsize', 'type': int, 'min': 10, 'max': 50, 'default': 47},    # /10
+            {'name': 'fast', 'type': int, 'min': 3, 'max': 8, 'default': 6},
+            {'name': 'slow', 'type': int, 'min': 20, 'max': 48, 'default': 44},
+            # {'name': 'clindex', 'type': int, 'min': 0, 'max': 134, 'default': 96},
+
+        ]
 
     @property
-    def targetpnl(self):
-        return self.dnas[self.dnaindex]['tpnl']
+    def atrpnl(self):
+        return self.hp['atrpnl'] / 10
 
     @property
-    def targetstop(self):
-        return self.dnas[self.dnaindex]['tstop']
+    def atrstop(self):
+        return self.hp['atrstop'] / 10
 
     @property
     def donchianlen(self):
-        return self.dnas[self.dnaindex]['donlen']
+        return self.hp['donchlen']
 
     @property
     def pumpsize(self):
-        return self.dnas[self.dnaindex]['pmpsize']
+        return self.hp['pmpsize']
 
     @property
     def ewofast(self):
-        return self.dnas[self.dnaindex]['fast']
+        return self.hp['fast']
 
     @property
     def ewoslow(self):
-        return self.dnas[self.dnaindex]['slow']
+        return self.hp['slow']
 
     @property
     def limit(self):
-        return 4
+        return 4  # cl[self.hp['clindex']][0]
 
     @property
     def carpan(self):
-        return 33
+        return 0.66  # cl[self.hp['clindex']][1] / 50
 
     @property
     def pumplookback(self):
         return 3
 
     @property
+    def atrlen(self):
+        return self.hp['atrlen']
+
+    @property
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 12 * numberofroutes
+        return 8 * numberofroutes
+
+    @property
+    @cached
+    def atr(self):
+        return ta.atr(self.candles, self.atrlen)
 
     @property
     @cached
@@ -109,7 +109,7 @@ class lazarus3(Strategy):
         open = self.candles[:, 1][-self.pumplookback]
         close = self.candles[:, 2][-1]
         multibardildo = abs(open - close) * 100 / open > self.pumpsize / 10
-        return multibardildo or self.isdildo(-1) or self.isdildo(-2) or self.isdildo(-3) # or self.isdildo(-4)
+        return self.isdildo(-1) or self.isdildo(-2) or self.isdildo(-3) or self.isdildo(-4) or multibardildo
 
     def should_long(self) -> bool:
         dc = True
@@ -127,25 +127,36 @@ class lazarus3(Strategy):
     def calcqty(self):
         if self.incr and not self.lastwasprofitable and self.losecount <= self.limit:
             return (self.capital / self.positionsize) * self.multiplier
-
         return self.capital / self.positionsize
 
     def go_long(self):
-        sl = self.targetstop / 1000
+        sl = self.price - (self.atrstop * self.atr)
+        # print('long price: ', self.price, 'sl: ', sl)
+        tp = self.price + (self.atrpnl * self.atr)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.buy = qty, self.price
-        self.stop_loss = qty, self.price - (self.price * sl)
+        self.stop_loss = qty, sl
+        self.take_profit = qty, tp
+        self.targetprice = tp
 
     def go_short(self):
-        sl = self.targetstop / 1000
+        sl = self.price + (self.atrstop * self.atr)
+        # print('short price: ', self.price, 'sl: ', sl)
+        tp = self.price - (self.atrpnl * self.atr)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.sell = qty, self.price
-        self.stop_loss = qty, self.price + (self.price * sl)
+        self.stop_loss = qty, sl
+        self.take_profit = qty, tp
+        self.targetprice = tp
 
     def update_position(self):
-        if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
+        # if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
+        if self.is_long and self.price >= self.targetprice:
+            self.liquidate()
+
+        if self.is_short and self.price <= self.targetprice:
             self.liquidate()
 
         # c. Emergency exit! Close position at trend reversal
@@ -156,7 +167,7 @@ class lazarus3(Strategy):
         self.lastwasprofitable = False
         self.losecount += 1
         self.wincount = 0
-        self.multiplier = self.multiplier * (1 + (self.carpan/50))
+        self.multiplier = self.multiplier * (1 + self.carpan)  # = 1 + 0.66
 
     def on_take_profit(self, order):
         self.lastwasprofitable = True

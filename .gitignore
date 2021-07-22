@@ -78,3 +78,4 @@ __pycache__/
 .idea/
 storage/temp
 storage/temp/*
+/storage/logs/

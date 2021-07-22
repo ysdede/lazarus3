@@ -7,14 +7,16 @@ from jesse.utils import anchor_timeframe
 
 # trading routes
 routes = [
-    ('Bitfinex', 'BTC-USD', '2h', 'lazarus3'),
-    # ('Bitfinex', 'ETH-USD', '1h', 'lazarus3'),
+    ('Binance', 'BTC-USDT', '5m', 'lazarusdyn'),
+    # ('Binance', 'BNB-USDT', '2h', 'lazarus3'),
+    # ('Bitfinex', 'ETH-USD', '1h', 'lazarusdyn'),
     # ('Bitfinex', 'LTC-USD', '2h', 'lazarus3'),
     # ('Bitfinex', 'ETC-USD', '2h', 'lazarus3'),
+
 ]
 
 # in case your strategy requires extra candles, timeframes, ...
 extra_candles = [
-    ('Bitfinex', 'BTC-USD', anchor_timeframe('6h')),
+    # ('Bitfinex', 'BTC-USD', '2h'),
 ]
 
