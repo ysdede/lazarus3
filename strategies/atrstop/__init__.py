@@ -4,7 +4,7 @@ import jesse.indicators as ta
 from jesse.services.selectors import get_all_trading_routes
 
 
-class lazarus3(Strategy):
+class atrstop(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -16,6 +16,8 @@ class lazarus3(Strategy):
         self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
         self.dnaindex = 1
+        self.atrlen = 41
+        self.atrstop = 1.3
 
         self.dnas = {
             1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
@@ -80,7 +82,12 @@ class lazarus3(Strategy):
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 10 * numberofroutes
+        return 8 * numberofroutes
+
+    @property
+    @cached
+    def atr(self):
+        return ta.atr(self.candles, self.atrlen)
 
     @property
     @cached
@@ -131,18 +138,22 @@ class lazarus3(Strategy):
         return self.capital / self.positionsize
 
     def go_long(self):
-        sl = self.targetstop / 1000
+        # sl = self.targetstop / 1000
+        sl = self.price - (self.atrstop * self.atr)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.buy = qty, self.price
-        self.stop_loss = qty, self.price - (self.price * sl)
+        # self.stop_loss = qty, self.price - (self.price * sl)
+        self.stop_loss = qty, sl
 
     def go_short(self):
-        sl = self.targetstop / 1000
+        # sl = self.targetstop / 1000
+        sl = self.price + (self.atrstop * self.atr)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.sell = qty, self.price
-        self.stop_loss = qty, self.price + (self.price * sl)
+        # self.stop_loss = qty, self.price + (self.price * sl)
+        self.stop_loss = qty, sl
 
     def update_position(self):
         if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):

@@ -13,7 +13,7 @@ class lazarusdyn(Strategy):
         self.lastwasprofitable = False
         self.targetprice = 0
         self.multiplier = 1
-        self.incr = False            # Martingale like aggressive position sizing.
+        self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
         self.dnaindex = 1
@@ -132,8 +132,8 @@ class lazarusdyn(Strategy):
 
     def go_long(self):
         sl = self.price - (self.atrstop * self.atr)
-        # print('long price: ', self.price, 'sl: ', sl)
         tp = self.price + (self.atrpnl * self.atr)
+        # print('long price: ', self.price, 'sl: ', sl, 'take profit: ', tp, 'atr: ', self.atr, 'atrpnl: ', self.atrpnl)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.buy = qty, self.price
@@ -143,8 +143,8 @@ class lazarusdyn(Strategy):
 
     def go_short(self):
         sl = self.price + (self.atrstop * self.atr)
-        # print('short price: ', self.price, 'sl: ', sl)
         tp = self.price - (self.atrpnl * self.atr)
+        # print('short price: ', self.price, 'sl: ', sl, 'take profit: ', tp, 'atr: ', self.atr, 'atrpnl: ', self.atrpnl)
         qty = utils.size_to_qty(self.calcqty, self.price, fee_rate=self.fee_rate) * self.leverage
 
         self.sell = qty, self.price

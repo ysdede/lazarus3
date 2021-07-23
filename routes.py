@@ -7,7 +7,9 @@ from jesse.utils import anchor_timeframe
 
 # trading routes
 routes = [
-    ('Bitfinex', 'BTC-USD', '2h', 'lazarusdyn'),
+    ('Bitfinex', 'BTC-USD', '2h', 'lazarus3'),
+    # ('Bitfinex', 'BTC-USD', '2h', 'lazarusdyn', 'Ad3'),
+
     # ('Binance', 'BNB-USDT', '2h', 'lazarus3'),
     # ('Bitfinex', 'ETH-USD', '1h', 'lazarusdyn'),
     # ('Bitfinex', 'LTC-USD', '2h', 'lazarus3'),
