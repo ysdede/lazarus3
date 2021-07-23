@@ -1,0 +1,46 @@
+//@version=4
+strategy("backtest-2021-07-23T19-02-56-lwt-Bitfinex-BTC-USD-2h-2018-01-15-2018-02-15", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.2)
+
+strategy.order("0", 1, 1.105, 8474.1, when = time_close == 1518408000000)
+strategy.order("0", 1, 0.1105, 8739.0, when = time_close == 1518487200000)
+strategy.order("0", 1, 0.442, 9240.0, when = time_close == 1518638400000)
+strategy.close("0", when = time_close == 1518652800000)
+
+strategy.order("1", 0, 0.715, 8020.3, when = time_close == 1518321600000)
+strategy.close("1", when = time_close >= 1518351780000 and time_close - 1518358980000 < 7200000)
+
+strategy.order("2", 0, 0.45999999999999996, 11236.0, when = time_close == 1517227200000)
+strategy.order("2", 0, 0.046, 11074.0, when = time_close == 1517299200000)
+strategy.order("2", 0, 0.184, 10333.0, when = time_close == 1517342400000)
+strategy.close("2", when = time_close == 1517824800000)
+
+strategy.order("3", 1, 0.45499999999999996, 11512.0, when = time_close == 1517068800000)
+strategy.order("3", 1, 0.0455, 11820.0, when = time_close == 1517148000000)
+strategy.close("3", when = time_close >= 1517226420000 and time_close - 1517233620000 < 7200000)
+
+strategy.order("4", 0, 0.49, 10939.0, when = time_close == 1517054400000)
+strategy.close("4", when = time_close >= 1517067780000 and time_close - 1517074980000 < 7200000)
+
+strategy.order("5", 1, 4.34, 11219.0, when = time_close == 1517040000000)
+strategy.close("5", when = time_close >= 1517052720000 and time_close - 1517059920000 < 7200000)
+
+strategy.order("6", 1, 2.8899999999999997, 11229.0, when = time_close == 1516910400000)
+strategy.close("6", when = time_close >= 1516954140000 and time_close - 1516961340000 < 7200000)
+
+strategy.order("7", 0, 1.835, 11023.0, when = time_close == 1516903200000)
+strategy.close("7", when = time_close == 1516910400000)
+
+strategy.order("8", 1, 1.1, 11202.0, when = time_close == 1516824000000)
+strategy.order("8", 1, 0.11000000000000001, 11403.0, when = time_close == 1516867200000)
+strategy.close("8", when = time_close == 1516903200000)
+
+strategy.order("9", 0, 0.66, 11478.0, when = time_close == 1516550400000)
+strategy.close("9", when = time_close >= 1516608480000 and time_close - 1516615680000 < 7200000)
+
+strategy.order("10", 0, 0.745, 13601.0, when = time_close == 1516060800000)
+strategy.order("10", 0, 0.0745, 11970.0, when = time_close == 1516118400000)
+strategy.order("10", 0, 0.298, 11065.0, when = time_close == 1516147200000)
+strategy.close("10", when = time_close == 1516204800000)
+
+strategy.order("11", 1, 0.43999999999999995, 14080.0, when = time_close == 1516032000000)
+strategy.close("11", when = time_close >= 1516049700000 and time_close - 1516056900000 < 7200000)

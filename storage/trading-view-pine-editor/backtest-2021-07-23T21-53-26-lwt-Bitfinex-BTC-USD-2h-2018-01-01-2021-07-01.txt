@@ -1,0 +1,1471 @@
+//@version=4
+strategy("backtest-2021-07-23T21-53-26-lwt-Bitfinex-BTC-USD-2h-2018-01-01-2021-07-01", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.2)
+
+strategy.order("0", 1, 1359.616, 33402.0, when = time_close == 1624780800000)
+strategy.order("0", 1, 448.67328000000003, 34433.0, when = time_close == 1624874400000)
+strategy.close("0", when = time_close == 1625097600000)
+
+strategy.order("1", 0, 845.248, 32825.0, when = time_close == 1624629600000)
+strategy.order("1", 0, 278.93184, 31953.95, when = time_close == 1624672800000)
+strategy.close("1", when = time_close == 1624780800000)
+
+strategy.order("2", 1, 531.144, 33916.242, when = time_close == 1624550400000)
+strategy.close("2", when = time_close >= 1624625280000 and time_close - 1624632480000 < 7200000)
+
+strategy.order("3", 0, 338.448, 33523.0, when = time_close == 1624464000000)
+strategy.close("3", when = time_close >= 1624548540000 and time_close - 1624555740000 < 7200000)
+
+strategy.order("4", 1, 203.416, 34016.0, when = time_close == 1624456800000)
+strategy.close("4", when = time_close == 1624464000000)
+
+strategy.order("5", 0, 937.96, 37672.0, when = time_close == 1623952800000)
+strategy.order("5", 0, 309.52680000000004, 35845.0, when = time_close == 1624060800000)
+strategy.close("5", when = time_close == 1624456800000)
+
+strategy.order("6", 1, 619.968, 39009.0, when = time_close == 1623945600000)
+strategy.close("6", when = time_close >= 1623950880000 and time_close - 1623958080000 < 7200000)
+
+strategy.order("7", 0, 383.28, 38718.496, when = time_close == 1623938400000)
+strategy.close("7", when = time_close == 1623945600000)
+
+strategy.order("8", 1, 232.672, 39498.0, when = time_close == 1623924000000)
+strategy.close("8", when = time_close == 1623938400000)
+
+strategy.order("9", 0, 148.024, 38346.0, when = time_close == 1623888000000)
+strategy.close("9", when = time_close == 1623924000000)
+
+strategy.order("10", 1, 148.264, 37346.0, when = time_close == 1623607200000)
+strategy.order("10", 1, 48.92712, 38965.0, when = time_close == 1623643200000)
+strategy.close("10", when = time_close == 1623888000000)
+
+strategy.order("11", 0, 393.648, 36330.0, when = time_close == 1622887200000)
+strategy.order("11", 0, 129.90384, 32974.0, when = time_close == 1623139200000)
+strategy.close("11", when = time_close == 1623254400000)
+
+strategy.order("12", 1, 239.496, 37608.0, when = time_close == 1622880000000)
+strategy.close("12", when = time_close >= 1622886720000 and time_close - 1622893920000 < 7200000)
+
+strategy.order("13", 0, 149.824, 36847.0, when = time_close == 1622800800000)
+strategy.close("13", when = time_close == 1622880000000)
+
+strategy.order("14", 1, 400.368, 36409.742, when = time_close == 1622584800000)
+strategy.order("14", 1, 132.12144, 37794.0, when = time_close == 1622671200000)
+strategy.close("14", when = time_close == 1622800800000)
+
+strategy.order("15", 0, 248.464, 35967.91, when = time_close == 1622577600000)
+strategy.close("15", when = time_close == 1622584800000)
+
+strategy.order("16", 1, 149.144, 36721.0, when = time_close == 1622469600000)
+strategy.close("16", when = time_close == 1622577600000)
+
+strategy.order("17", 0, 147.432, 37004.0, when = time_close == 1622181600000)
+strategy.order("17", 0, 48.65256, 36949.027, when = time_close == 1622210400000)
+strategy.close("17", when = time_close == 1622469600000)
+
+strategy.order("18", 0, 302.144, 56443.63, when = time_close == 1620820800000)
+strategy.order("18", 0, 99.70752, 50937.598, when = time_close == 1620885600000)
+strategy.close("18", when = time_close == 1621404000000)
+
+strategy.order("19", 1, 190.152, 57291.0, when = time_close == 1620799200000)
+strategy.close("19", when = time_close == 1620820800000)
+
+strategy.order("20", 0, 123.648, 55771.0, when = time_close == 1620676800000)
+strategy.order("20", 0, 40.80384, 55700.0, when = time_close == 1620720000000)
+strategy.close("20", when = time_close >= 1620790920000 and time_close - 1620798120000 < 7200000)
+
+strategy.order("21", 1, 74.848, 58026.0, when = time_close == 1620597600000)
+strategy.close("21", when = time_close >= 1620675720000 and time_close - 1620682920000 < 7200000)
+
+strategy.order("22", 0, 46.184, 57281.0, when = time_close == 1620590400000)
+strategy.close("22", when = time_close == 1620597600000)
+
+strategy.order("23", 1, 208.232, 57053.0, when = time_close == 1620396000000)
+strategy.order("23", 1, 68.71656, 57611.0, when = time_close == 1620489600000)
+strategy.close("23", when = time_close == 1620590400000)
+
+strategy.order("24", 0, 138.352, 55754.0, when = time_close == 1620360000000)
+strategy.close("24", when = time_close >= 1620392340000 and time_close - 1620399540000 < 7200000)
+
+strategy.order("25", 1, 84.352, 57592.0, when = time_close == 1620230400000)
+strategy.close("25", when = time_close >= 1620326460000 and time_close - 1620333660000 < 7200000)
+
+strategy.order("26", 0, 53.48, 55473.0, when = time_close == 1620100800000)
+strategy.order("26", 0, 17.6484, 54551.0, when = time_close == 1620158400000)
+strategy.close("26", when = time_close >= 1620226920000 and time_close - 1620234120000 < 7200000)
+
+strategy.order("27", 1, 86.576, 54360.18, when = time_close == 1619769600000)
+strategy.order("27", 1, 28.57008, 57994.0, when = time_close == 1619848800000)
+strategy.close("27", when = time_close == 1620100800000)
+
+strategy.order("28", 0, 55.168, 52775.0, when = time_close == 1619719200000)
+strategy.close("28", when = time_close >= 1619766060000 and time_close - 1619773260000 < 7200000)
+
+strategy.order("29", 0, 43.888, 60629.0, when = time_close == 1618567200000)
+strategy.order("29", 0, 14.48304, 55008.0, when = time_close == 1618740000000)
+strategy.close("29", when = time_close == 1619416800000)
+
+strategy.order("30", 1, 44.344, 57683.0, when = time_close == 1617919200000)
+strategy.order("30", 1, 14.63352, 60657.0, when = time_close == 1618056000000)
+strategy.close("30", when = time_close == 1618567200000)
+
+strategy.order("31", 0, 116.712, 58220.75, when = time_close == 1617732000000)
+strategy.order("31", 0, 38.51496, 56181.79, when = time_close == 1617832800000)
+strategy.close("31", when = time_close == 1617919200000)
+
+strategy.order("32", 1, 70.664, 58932.0, when = time_close == 1617645600000)
+strategy.close("32", when = time_close == 1617732000000)
+
+strategy.order("33", 0, 44.096, 57609.0, when = time_close == 1617487200000)
+strategy.order("33", 0, 14.55168, 57519.0, when = time_close == 1617508800000)
+strategy.close("33", when = time_close == 1617645600000)
+
+strategy.order("34", 1, 117.848, 54993.0, when = time_close == 1616803200000)
+strategy.order("34", 1, 38.88984, 55886.0, when = time_close == 1616889600000)
+strategy.close("34", when = time_close == 1617487200000)
+
+strategy.order("35", 0, 71.656, 54799.54, when = time_close == 1616616000000)
+strategy.close("35", when = time_close == 1616803200000)
+
+strategy.order("36", 1, 42.952, 56318.363, when = time_close == 1616601600000)
+strategy.close("36", when = time_close == 1616616000000)
+
+strategy.order("37", 0, 42.056, 57104.0, when = time_close == 1616306400000)
+strategy.order("37", 0, 13.87848, 56969.0, when = time_close == 1616335200000)
+strategy.close("37", when = time_close == 1616601600000)
+
+strategy.order("38", 1, 163.0, 49122.0, when = time_close == 1615082400000)
+strategy.order("38", 1, 53.79, 50604.0, when = time_close == 1615132800000)
+strategy.close("38", when = time_close == 1615802400000)
+
+strategy.order("39", 0, 103.784, 48322.0, when = time_close == 1615024800000)
+strategy.close("39", when = time_close == 1615082400000)
+
+strategy.order("40", 1, 62.8, 48830.0, when = time_close == 1614988800000)
+strategy.close("40", when = time_close == 1615024800000)
+
+strategy.order("41", 0, 38.68, 48015.0, when = time_close == 1614888000000)
+strategy.order("41", 0, 12.7644, 47236.0, when = time_close == 1614924000000)
+strategy.close("41", when = time_close == 1614988800000)
+
+strategy.order("42", 1, 38.672, 47844.0, when = time_close == 1614600000000)
+strategy.order("42", 1, 12.761759999999999, 48299.0, when = time_close == 1614628800000)
+strategy.close("42", when = time_close == 1614888000000)
+
+strategy.order("43", 1, 71.184, 33827.0, when = time_close == 1612166400000)
+strategy.order("43", 1, 23.49072, 34778.0, when = time_close == 1612281600000)
+strategy.close("43", when = time_close == 1612800000000)
+
+strategy.order("44", 0, 45.272, 32900.0, when = time_close == 1612108800000)
+strategy.close("44", when = time_close >= 1612153560000 and time_close - 1612160760000 < 7200000)
+
+strategy.order("45", 1, 45.352, 32574.0, when = time_close == 1611864000000)
+strategy.order("45", 1, 14.96616, 33020.0, when = time_close == 1611900000000)
+strategy.close("45", when = time_close == 1612108800000)
+
+strategy.order("46", 0, 72.52, 32746.0, when = time_close == 1611626400000)
+strategy.order("46", 0, 23.9316, 30570.996, when = time_close == 1611770400000)
+strategy.close("46", when = time_close == 1611864000000)
+
+strategy.order("47", 1, 43.496, 33377.0, when = time_close == 1611554400000)
+strategy.order("47", 1, 14.35368, 33780.0, when = time_close == 1611597600000)
+strategy.close("47", when = time_close >= 1611610320000 and time_close - 1611617520000 < 7200000)
+
+strategy.order("48", 0, 221.424, 36140.0, when = time_close == 1611108000000)
+strategy.order("48", 0, 73.06992000000001, 34847.63, when = time_close == 1611165600000)
+strategy.close("48", when = time_close == 1611554400000)
+
+strategy.order("49", 1, 139.528, 36699.0, when = time_close == 1611014400000)
+strategy.close("49", when = time_close == 1611108000000)
+
+strategy.order("50", 0, 91.792, 35751.836, when = time_close == 1610992800000)
+strategy.close("50", when = time_close == 1611014400000)
+
+strategy.order("51", 1, 56.096, 36846.0, when = time_close == 1610978400000)
+strategy.close("51", when = time_close >= 1610991000000 and time_close - 1610998200000 < 7200000)
+
+strategy.order("52", 0, 34.144, 36421.0, when = time_close == 1610827200000)
+strategy.order("52", 0, 11.26752, 35302.242, when = time_close == 1610884800000)
+strategy.close("52", when = time_close == 1610978400000)
+
+strategy.order("53", 1, 72.384, 31800.0, when = time_close == 1609848000000)
+strategy.order("53", 1, 23.88672, 33892.0, when = time_close == 1609927200000)
+strategy.close("53", when = time_close == 1610107200000)
+
+strategy.order("54", 1, 45.32, 31990.0, when = time_close == 1609804800000)
+strategy.close("54", when = time_close >= 1609819860000 and time_close - 1609827060000 < 7200000)
+
+strategy.order("55", 0, 28.944, 30982.0, when = time_close == 1609797600000)
+strategy.close("55", when = time_close >= 1609804080000 and time_close - 1609811280000 < 7200000)
+
+strategy.order("56", 1, 93.104, 23356.0, when = time_close == 1608818400000)
+strategy.order("56", 1, 30.724320000000002, 23995.0, when = time_close == 1608912000000)
+strategy.close("56", when = time_close == 1609596000000)
+
+strategy.order("57", 0, 60.176, 22872.82, when = time_close == 1608782400000)
+strategy.close("57", when = time_close == 1608818400000)
+
+strategy.order("58", 1, 36.928, 23474.0, when = time_close == 1608645600000)
+strategy.close("58", when = time_close >= 1608762240000 and time_close - 1608769440000 < 7200000)
+
+strategy.order("59", 0, 23.464, 22805.682, when = time_close == 1608580800000)
+strategy.close("59", when = time_close == 1608645600000)
+
+strategy.order("60", 1, 24.904, 18460.0, when = time_close == 1607767200000)
+strategy.order("60", 1, 8.21832, 18797.824, when = time_close == 1607824800000)
+strategy.close("60", when = time_close == 1608415200000)
+
+strategy.order("61", 0, 161.952, 18803.0, when = time_close == 1607421600000)
+strategy.order("61", 0, 53.444160000000004, 18078.0, when = time_close == 1607508000000)
+strategy.close("61", when = time_close == 1607767200000)
+
+strategy.order("62", 1, 103.616, 19196.068, when = time_close == 1607385600000)
+strategy.close("62", when = time_close == 1607421600000)
+
+strategy.order("63", 0, 63.52, 19103.0, when = time_close == 1607378400000)
+strategy.close("63", when = time_close == 1607385600000)
+
+strategy.order("64", 1, 38.312, 19115.623, when = time_close == 1607191200000)
+strategy.close("64", when = time_close == 1607378400000)
+
+strategy.order("65", 0, 23.296, 18978.0, when = time_close == 1607104800000)
+strategy.order("65", 0, 7.68768, 18822.0, when = time_close == 1607140800000)
+strategy.close("65", when = time_close == 1607191200000)
+
+strategy.order("66", 1, 24.0, 17768.0, when = time_close == 1606600800000)
+strategy.order("66", 1, 7.92, 17851.0, when = time_close == 1606636800000)
+strategy.close("66", when = time_close == 1607104800000)
+
+strategy.order("67", 1, 90.664, 16023.0, when = time_close == 1605499200000)
+strategy.order("67", 1, 29.919120000000003, 16719.0, when = time_close == 1605571200000)
+strategy.close("67", when = time_close == 1606363200000)
+
+strategy.order("68", 0, 56.424, 15871.0, when = time_close == 1605470400000)
+strategy.close("68", when = time_close == 1605499200000)
+
+strategy.order("69", 1, 34.104, 15980.0, when = time_close == 1605391200000)
+strategy.close("69", when = time_close == 1605470400000)
+
+strategy.order("70", 0, 20.824, 15867.0, when = time_close == 1605384000000)
+strategy.close("70", when = time_close == 1605391200000)
+
+strategy.order("71", 1, 21.696, 13707.146, when = time_close == 1604419200000)
+strategy.order("71", 1, 7.159680000000001, 15119.0, when = time_close == 1604606400000)
+strategy.close("71", when = time_close == 1605384000000)
+
+strategy.order("72", 0, 197.28, 13397.0, when = time_close == 1604318400000)
+strategy.close("72", when = time_close == 1604419200000)
+
+strategy.order("73", 1, 115.176, 13431.731, when = time_close == 1603987200000)
+strategy.order("73", 1, 38.00808, 13860.0, when = time_close == 1604160000000)
+strategy.close("73", when = time_close == 1604318400000)
+
+strategy.order("74", 0, 74.784, 13136.0, when = time_close == 1603958400000)
+strategy.close("74", when = time_close == 1603987200000)
+
+strategy.order("75", 1, 45.24, 13267.0, when = time_close == 1603929600000)
+strategy.close("75", when = time_close == 1603958400000)
+
+strategy.order("76", 0, 27.552, 13192.0, when = time_close == 1603922400000)
+strategy.close("76", when = time_close == 1603929600000)
+
+strategy.order("77", 1, 105.288, 11400.45, when = time_close == 1603000800000)
+strategy.order("77", 1, 34.74504, 11433.0, when = time_close == 1603022400000)
+strategy.close("77", when = time_close == 1603922400000)
+
+strategy.order("78", 0, 66.072, 11264.0, when = time_close == 1602842400000)
+strategy.close("78", when = time_close == 1603000800000)
+
+strategy.order("79", 1, 40.024, 11416.886, when = time_close == 1602777600000)
+strategy.close("79", when = time_close == 1602842400000)
+
+strategy.order("80", 0, 24.488, 11323.147, when = time_close == 1602756000000)
+strategy.close("80", when = time_close == 1602777600000)
+
+strategy.order("81", 1, 24.992, 10755.014, when = time_close == 1602165600000)
+strategy.order("81", 1, 8.24736, 10910.0, when = time_close == 1602216000000)
+strategy.close("81", when = time_close == 1602756000000)
+
+strategy.order("82", 0, 25.744, 10585.0, when = time_close == 1602021600000)
+strategy.close("82", when = time_close == 1602165600000)
+
+strategy.order("83", 1, 25.624, 10695.0, when = time_close == 1601841600000)
+strategy.order("83", 1, 8.45592, 10713.081, when = time_close == 1601920800000)
+strategy.close("83", when = time_close == 1602021600000)
+
+strategy.order("84", 0, 26.536, 10494.0, when = time_close == 1601575200000)
+strategy.close("84", when = time_close == 1601841600000)
+
+strategy.order("85", 1, 26.096, 10859.396, when = time_close == 1601517600000)
+strategy.order("85", 1, 8.61168, 10880.0, when = time_close == 1601560800000)
+strategy.close("85", when = time_close >= 1601569140000 and time_close - 1601576340000 < 7200000)
+
+strategy.order("86", 0, 217.0, 10733.646, when = time_close == 1601496000000)
+strategy.close("86", when = time_close == 1601517600000)
+
+strategy.order("87", 1, 132.896, 10788.0, when = time_close == 1601488800000)
+strategy.close("87", when = time_close == 1601496000000)
+
+strategy.order("88", 0, 81.8, 10722.0, when = time_close == 1601452800000)
+strategy.close("88", when = time_close == 1601488800000)
+
+strategy.order("89", 1, 49.536, 10856.0, when = time_close == 1601424000000)
+strategy.close("89", when = time_close == 1601452800000)
+
+strategy.order("90", 0, 30.696, 10690.655, when = time_close == 1601359200000)
+strategy.close("90", when = time_close == 1601424000000)
+
+strategy.order("91", 1, 30.728, 10670.0, when = time_close == 1600977600000)
+strategy.order("91", 1, 10.14024, 10688.0, when = time_close == 1601006400000)
+strategy.close("91", when = time_close == 1601359200000)
+
+strategy.order("92", 0, 82.984, 10710.0, when = time_close == 1600682400000)
+strategy.order("92", 0, 27.384719999999998, 10519.0, when = time_close == 1600718400000)
+strategy.close("92", when = time_close == 1600977600000)
+
+strategy.order("93", 1, 50.976, 10981.0, when = time_close == 1600660800000)
+strategy.close("93", when = time_close == 1600682400000)
+
+strategy.order("94", 0, 31.368, 10856.0, when = time_close == 1600617600000)
+strategy.close("94", when = time_close == 1600660800000)
+
+strategy.order("95", 1, 200.952, 10383.0, when = time_close == 1600077600000)
+strategy.order("95", 1, 66.31416, 10690.0, when = time_close == 1600128000000)
+strategy.close("95", when = time_close == 1600617600000)
+
+strategy.order("96", 0, 126.472, 10294.0, when = time_close == 1600020000000)
+strategy.close("96", when = time_close == 1600077600000)
+
+strategy.order("97", 1, 75.848, 10330.0, when = time_close == 1599840000000)
+strategy.order("97", 1, 25.02984, 10442.132, when = time_close == 1599962400000)
+strategy.close("97", when = time_close == 1600020000000)
+
+strategy.order("98", 0, 46.312, 10275.052, when = time_close == 1599832800000)
+strategy.close("98", when = time_close == 1599840000000)
+
+strategy.order("99", 1, 27.896, 10300.168, when = time_close == 1599681600000)
+strategy.close("99", when = time_close == 1599832800000)
+
+strategy.order("100", 0, 38.472, 11417.0, when = time_close == 1599048000000)
+strategy.order("100", 0, 12.695760000000002, 11414.0, when = time_close == 1599076800000)
+strategy.close("100", when = time_close == 1599681600000)
+
+strategy.order("101", 1, 23.24, 11558.0, when = time_close == 1598630400000)
+strategy.order("101", 1, 7.6692, 11685.855, when = time_close == 1598853600000)
+strategy.close("101", when = time_close >= 1599045780000 and time_close - 1599052980000 < 7200000)
+
+strategy.order("102", 0, 38.064, 11585.0, when = time_close == 1598342400000)
+strategy.order("102", 0, 12.56112, 11316.0, when = time_close == 1598392800000)
+strategy.close("102", when = time_close == 1598630400000)
+
+strategy.order("103", 1, 22.768, 11776.0, when = time_close == 1598256000000)
+strategy.order("103", 1, 7.513440000000001, 11778.0, when = time_close == 1598277600000)
+strategy.close("103", when = time_close == 1598342400000)
+
+strategy.order("104", 0, 22.544, 11850.0, when = time_close == 1597809600000)
+strategy.order("104", 0, 7.439520000000001, 11807.0, when = time_close == 1597831200000)
+strategy.close("104", when = time_close == 1598256000000)
+
+strategy.order("105", 1, 22.552, 11792.46, when = time_close == 1597363200000)
+strategy.order("105", 1, 7.44216, 11910.0, when = time_close == 1597485600000)
+strategy.close("105", when = time_close == 1597809600000)
+
+strategy.order("106", 0, 175.08, 11647.0, when = time_close == 1597154400000)
+strategy.order("106", 0, 57.77640000000001, 11379.0, when = time_close == 1597190400000)
+strategy.close("106", when = time_close == 1597363200000)
+
+strategy.order("107", 1, 117.656, 11862.0, when = time_close == 1597024800000)
+strategy.close("107", when = time_close >= 1597055460000 and time_close - 1597062660000 < 7200000)
+
+strategy.order("108", 0, 77.176, 11566.043, when = time_close == 1596988800000)
+strategy.close("108", when = time_close == 1597024800000)
+
+strategy.order("109", 1, 46.592, 11608.981, when = time_close == 1596866400000)
+strategy.close("109", when = time_close == 1596988800000)
+
+strategy.order("110", 0, 28.408, 11536.0, when = time_close == 1596859200000)
+strategy.close("110", when = time_close == 1596866400000)
+
+strategy.order("111", 1, 124.632, 11388.594, when = time_close == 1596621600000)
+strategy.order("111", 1, 41.12856, 11648.0, when = time_close == 1596657600000)
+strategy.close("111", when = time_close == 1596859200000)
+
+strategy.order("112", 0, 81.56, 11112.081, when = time_close == 1596542400000)
+strategy.close("112", when = time_close == 1596621600000)
+
+strategy.order("113", 1, 49.608, 11402.0, when = time_close == 1596477600000)
+strategy.close("113", when = time_close == 1596542400000)
+
+strategy.order("114", 0, 31.336, 11112.0, when = time_close == 1596376800000)
+strategy.close("114", when = time_close == 1596477600000)
+
+strategy.order("115", 1, 71.832, 9231.2, when = time_close == 1595203200000)
+strategy.order("115", 1, 23.70456, 9357.4, when = time_close == 1595347200000)
+strategy.close("115", when = time_close == 1596340800000)
+
+strategy.order("116", 0, 44.144, 9157.0, when = time_close == 1595138400000)
+strategy.close("116", when = time_close == 1595203200000)
+
+strategy.order("117", 1, 26.6, 9176.9, when = time_close == 1595102400000)
+strategy.close("117", when = time_close == 1595138400000)
+
+strategy.order("118", 0, 26.192, 9247.3, when = time_close == 1594692000000)
+strategy.order("118", 0, 8.643360000000001, 9097.0, when = time_close == 1594908000000)
+strategy.close("118", when = time_close == 1595102400000)
+
+strategy.order("119", 1, 26.168, 9315.8, when = time_close == 1594598400000)
+strategy.close("119", when = time_close == 1594692000000)
+
+strategy.order("120", 0, 214.768, 9223.8, when = time_close == 1594562400000)
+strategy.close("120", when = time_close == 1594598400000)
+
+strategy.order("121", 1, 132.288, 9290.0, when = time_close == 1594526400000)
+strategy.close("121", when = time_close == 1594562400000)
+
+strategy.order("122", 0, 81.664, 9225.0, when = time_close == 1594461600000)
+strategy.close("122", when = time_close == 1594526400000)
+
+strategy.order("123", 1, 49.336, 9277.5, when = time_close == 1594447200000)
+strategy.close("123", when = time_close == 1594461600000)
+
+strategy.order("124", 0, 29.928, 9233.451, when = time_close == 1594324800000)
+strategy.order("124", 0, 9.876240000000001, 9199.8, when = time_close == 1594375200000)
+strategy.close("124", when = time_close == 1594447200000)
+
+strategy.order("125", 1, 29.904, 9207.4, when = time_close == 1594022400000)
+strategy.order("125", 1, 9.86832, 9299.9, when = time_close == 1594065600000)
+strategy.close("125", when = time_close == 1594324800000)
+
+strategy.order("126", 0, 30.664, 9084.5, when = time_close == 1593928800000)
+strategy.close("126", when = time_close == 1594022400000)
+
+strategy.order("127", 1, 242.592, 9147.7, when = time_close == 1593907200000)
+strategy.close("127", when = time_close == 1593928800000)
+
+strategy.order("128", 0, 153.632, 9057.571, when = time_close == 1593705600000)
+strategy.close("128", when = time_close == 1593907200000)
+
+strategy.order("129", 1, 92.8, 9178.1, when = time_close == 1593597600000)
+strategy.order("129", 1, 30.624, 9245.689, when = time_close == 1593640800000)
+strategy.close("129", when = time_close == 1593705600000)
+
+strategy.order("130", 0, 56.584, 9134.8, when = time_close == 1593568800000)
+strategy.close("130", when = time_close == 1593597600000)
+
+strategy.order("131", 1, 34.04, 9219.3, when = time_close == 1593468000000)
+strategy.close("131", when = time_close == 1593568800000)
+
+strategy.order("132", 0, 148.792, 9340.0, when = time_close == 1593000000000)
+strategy.order("132", 0, 49.10136, 9306.1, when = time_close == 1593028800000)
+strategy.close("132", when = time_close == 1593468000000)
+
+strategy.order("133", 1, 88.336, 9397.7, when = time_close == 1592798400000)
+strategy.order("133", 1, 29.15088, 9646.484, when = time_close == 1592877600000)
+strategy.close("133", when = time_close == 1593000000000)
+
+strategy.order("134", 0, 54.008, 9342.6, when = time_close == 1592776800000)
+strategy.close("134", when = time_close == 1592798400000)
+
+strategy.order("135", 1, 32.512, 9405.3, when = time_close == 1592719200000)
+strategy.close("135", when = time_close == 1592776800000)
+
+strategy.order("136", 0, 32.48, 9407.752, when = time_close == 1592416800000)
+strategy.order("136", 0, 10.718399999999999, 9364.8, when = time_close == 1592560800000)
+strategy.close("136", when = time_close == 1592719200000)
+
+strategy.order("137", 1, 32.384, 9571.183, when = time_close == 1592280000000)
+strategy.close("137", when = time_close == 1592416800000)
+
+strategy.order("138", 0, 32.536, 9516.2, when = time_close == 1591891200000)
+strategy.order("138", 0, 10.736880000000001, 9339.55, when = time_close == 1591927200000)
+strategy.close("138", when = time_close == 1592280000000)
+
+strategy.order("139", 1, 32.072, 9747.1, when = time_close == 1591574400000)
+strategy.order("139", 1, 10.583760000000002, 9887.6, when = time_close == 1591855200000)
+strategy.close("139", when = time_close == 1591891200000)
+
+strategy.order("140", 0, 269.616, 9620.4, when = time_close == 1591401600000)
+strategy.close("140", when = time_close == 1591574400000)
+
+strategy.order("141", 1, 160.296, 9633.7, when = time_close == 1591272000000)
+strategy.order("141", 1, 52.89768, 9778.6, when = time_close == 1591308000000)
+strategy.close("141", when = time_close == 1591401600000)
+
+strategy.order("142", 0, 98.88, 9568.409, when = time_close == 1591264800000)
+strategy.close("142", when = time_close == 1591272000000)
+
+strategy.order("143", 1, 59.856, 9678.6, when = time_close == 1591243200000)
+strategy.close("143", when = time_close == 1591264800000)
+
+strategy.order("144", 0, 37.128, 9526.968, when = time_close == 1591142400000)
+strategy.close("144", when = time_close == 1591243200000)
+
+strategy.order("145", 1, 37.84, 9149.923, when = time_close == 1590580800000)
+strategy.order("145", 1, 12.487200000000001, 9158.385, when = time_close == 1590609600000)
+strategy.close("145", when = time_close == 1591142400000)
+
+strategy.order("146", 0, 35.224, 9523.3, when = time_close == 1589997600000)
+strategy.order("146", 0, 11.62392, 9098.2, when = time_close == 1590098400000)
+strategy.close("146", when = time_close == 1590580800000)
+
+strategy.order("147", 1, 93.152, 9027.4, when = time_close == 1589371200000)
+strategy.order("147", 1, 30.740160000000003, 9275.4, when = time_close == 1589421600000)
+strategy.close("147", when = time_close == 1589997600000)
+
+strategy.order("148", 1, 57.888, 8802.35, when = time_close == 1588615200000)
+strategy.order("148", 1, 19.10304, 9282.4, when = time_close == 1588788000000)
+strategy.close("148", when = time_close >= 1589070060000 and time_close - 1589077260000 < 7200000)
+
+strategy.order("149", 0, 36.272, 8616.6, when = time_close == 1588572000000)
+strategy.close("149", when = time_close == 1588615200000)
+
+strategy.order("150", 1, 37.872, 7076.3, when = time_close == 1587564000000)
+strategy.order("150", 1, 12.497760000000001, 7101.6, when = time_close == 1587592800000)
+strategy.close("150", when = time_close == 1588219200000)
+
+strategy.order("151", 0, 38.624, 6967.3, when = time_close == 1587384000000)
+strategy.order("151", 0, 12.745920000000002, 6837.7, when = time_close == 1587427200000)
+strategy.close("151", when = time_close == 1587564000000)
+
+strategy.order("152", 0, 39.72, 6845.5, when = time_close == 1586944800000)
+strategy.order("152", 0, 13.1076, 6649.5376, when = time_close == 1587016800000)
+strategy.close("152", when = time_close >= 1587025980000 and time_close - 1587033180000 < 7200000)
+
+strategy.order("153", 1, 39.664, 6914.0166, when = time_close == 1586923200000)
+strategy.close("153", when = time_close == 1586944800000)
+
+strategy.order("154", 0, 40.112, 6874.0, when = time_close == 1586908800000)
+strategy.close("154", when = time_close == 1586923200000)
+
+strategy.order("155", 1, 316.952, 6920.2617, when = time_close == 1586887200000)
+strategy.close("155", when = time_close == 1586908800000)
+
+strategy.order("156", 1, 210.696, 7124.9, when = time_close == 1586714400000)
+strategy.close("156", when = time_close >= 1586736060000 and time_close - 1586743260000 < 7200000)
+
+strategy.order("157", 0, 135.672, 6968.3, when = time_close == 1586498400000)
+strategy.order("157", 0, 44.77176, 6912.5, when = time_close == 1586527200000)
+strategy.close("157", when = time_close >= 1586711280000 and time_close - 1586718480000 < 7200000)
+
+strategy.order("158", 0, 94.28, 6315.7, when = time_close == 1585735200000)
+strategy.close("158", when = time_close >= 1585779960000 and time_close - 1585787160000 < 7200000)
+
+strategy.order("159", 1, 56.76, 6356.0, when = time_close == 1585584000000)
+strategy.close("159", when = time_close == 1585735200000)
+
+strategy.order("160", 0, 93.248, 6370.0, when = time_close == 1585353600000)
+strategy.order("160", 0, 30.771840000000005, 6263.5, when = time_close == 1585389600000)
+strategy.close("160", when = time_close == 1585584000000)
+
+strategy.order("161", 0, 62.096, 5917.4, when = time_close == 1584907200000)
+strategy.close("161", when = time_close >= 1584913740000 and time_close - 1584920940000 < 7200000)
+
+strategy.order("162", 1, 62.24, 5439.5215, when = time_close == 1584604800000)
+strategy.order("162", 1, 20.5392, 6243.2, when = time_close == 1584655200000)
+strategy.close("162", when = time_close == 1584907200000)
+
+strategy.order("163", 0, 32.312, 8920.0, when = time_close == 1583618400000)
+strategy.order("163", 0, 10.66296, 8772.8, when = time_close == 1583654400000)
+strategy.close("163", when = time_close == 1584014400000)
+
+strategy.order("164", 1, 233.512, 8902.0, when = time_close == 1583373600000)
+strategy.order("164", 1, 77.05896, 9122.3, when = time_close == 1583424000000)
+strategy.close("164", when = time_close == 1583618400000)
+
+strategy.order("165", 0, 150.344, 8784.485, when = time_close == 1583330400000)
+strategy.close("165", when = time_close == 1583373600000)
+
+strategy.order("166", 1, 91.288, 8829.3, when = time_close == 1583287200000)
+strategy.close("166", when = time_close == 1583330400000)
+
+strategy.order("167", 0, 55.904, 8771.1, when = time_close == 1583272800000)
+strategy.close("167", when = time_close == 1583287200000)
+
+strategy.order("168", 1, 33.464, 8858.419, when = time_close == 1583157600000)
+strategy.order("168", 1, 11.04312, 8938.4, when = time_close == 1583193600000)
+strategy.close("168", when = time_close == 1583272800000)
+
+strategy.order("169", 0, 167.216, 9719.9, when = time_close == 1582560000000)
+strategy.order("169", 0, 55.18128000000001, 9576.8, when = time_close == 1582624800000)
+strategy.close("169", when = time_close == 1583157600000)
+
+strategy.order("170", 1, 107.48, 9895.7, when = time_close == 1582437600000)
+strategy.order("170", 1, 35.4684, 9914.684, when = time_close == 1582509600000)
+strategy.close("170", when = time_close >= 1582511880000 and time_close - 1582519080000 < 7200000)
+
+strategy.order("171", 1, 66.488, 10056.0, when = time_close == 1582056000000)
+strategy.order("171", 1, 21.94104, 10159.976, when = time_close == 1582084800000)
+strategy.close("171", when = time_close >= 1582148880000 and time_close - 1582156080000 < 7200000)
+
+strategy.order("172", 0, 40.624, 9970.0, when = time_close == 1581782400000)
+strategy.order("172", 0, 13.405920000000002, 9900.9, when = time_close == 1581811200000)
+strategy.close("172", when = time_close == 1582056000000)
+
+strategy.order("173", 0, 25.472, 9838.0, when = time_close == 1581357600000)
+strategy.close("173", when = time_close >= 1581438960000 and time_close - 1581446160000 < 7200000)
+
+strategy.order("174", 1, 42.16, 9418.0, when = time_close == 1580904000000)
+strategy.order("174", 1, 13.912799999999999, 9612.0, when = time_close == 1580947200000)
+strategy.close("174", when = time_close == 1581357600000)
+
+strategy.order("175", 0, 25.936, 9281.2, when = time_close == 1580745600000)
+strategy.order("175", 0, 8.55888, 9206.4, when = time_close == 1580832000000)
+strategy.close("175", when = time_close == 1580904000000)
+
+strategy.order("176", 1, 26.904, 8456.993, when = time_close == 1580054400000)
+strategy.order("176", 1, 8.87832, 8669.9, when = time_close == 1580097600000)
+strategy.close("176", when = time_close == 1580745600000)
+
+strategy.order("177", 0, 67.856, 8673.8, when = time_close == 1579687200000)
+strategy.order("177", 0, 22.39248, 8314.6, when = time_close == 1579802400000)
+strategy.close("177", when = time_close == 1580054400000)
+
+strategy.order("178", 1, 40.992, 8723.964, when = time_close == 1579680000000)
+strategy.close("178", when = time_close == 1579687200000)
+
+strategy.order("179", 0, 25.224, 8625.1, when = time_close == 1579449600000)
+strategy.close("179", when = time_close == 1579680000000)
+
+strategy.order("180", 1, 25.672, 8050.5, when = time_close == 1578672000000)
+strategy.order("180", 1, 8.47176, 8509.942, when = time_close == 1579003200000)
+strategy.close("180", when = time_close == 1579449600000)
+
+strategy.order("181", 0, 27.248, 7790.9, when = time_close == 1578592800000)
+strategy.close("181", when = time_close >= 1578669360000 and time_close - 1578676560000 < 7200000)
+
+strategy.order("182", 0, 232.112, 7273.5, when = time_close == 1577721600000)
+strategy.order("182", 0, 76.59696, 7197.4, when = time_close == 1577829600000)
+strategy.close("182", when = time_close == 1578045600000)
+
+strategy.order("183", 1, 138.984, 7287.0, when = time_close == 1577491200000)
+strategy.order("183", 1, 45.864720000000005, 7357.6, when = time_close == 1577570400000)
+strategy.close("183", when = time_close == 1577721600000)
+
+strategy.order("184", 0, 85.936, 7232.4, when = time_close == 1577404800000)
+strategy.close("184", when = time_close == 1577491200000)
+
+strategy.order("185", 1, 52.2, 7391.6, when = time_close == 1577383200000)
+strategy.close("185", when = time_close == 1577404800000)
+
+strategy.order("186", 0, 32.536, 7255.776, when = time_close == 1577210400000)
+strategy.close("186", when = time_close == 1577383200000)
+
+strategy.order("187", 1, 32.704, 7169.3, when = time_close == 1576706400000)
+strategy.order("187", 1, 10.79232, 7200.0, when = time_close == 1576735200000)
+strategy.close("187", when = time_close == 1577210400000)
+
+strategy.order("188", 0, 53.328, 7216.988, when = time_close == 1576317600000)
+strategy.order("188", 0, 17.59824, 7110.3, when = time_close == 1576360800000)
+strategy.close("188", when = time_close == 1576706400000)
+
+strategy.order("189", 1, 32.08, 7290.2, when = time_close == 1576288800000)
+strategy.close("189", when = time_close == 1576317600000)
+
+strategy.order("190", 0, 30.88, 7467.7, when = time_close == 1575914400000)
+strategy.order("190", 0, 10.1904, 7409.1, when = time_close == 1575950400000)
+strategy.close("190", when = time_close == 1576288800000)
+
+strategy.order("191", 1, 137.264, 7424.9, when = time_close == 1575554400000)
+strategy.order("191", 1, 45.29712000000001, 7572.2, when = time_close == 1575705600000)
+strategy.close("191", when = time_close == 1575914400000)
+
+strategy.order("192", 0, 91.424, 7238.3, when = time_close == 1575504000000)
+strategy.close("192", when = time_close >= 1575536760000 and time_close - 1575543960000 < 7200000)
+
+strategy.order("193", 1, 55.344, 7530.2, when = time_close == 1575475200000)
+strategy.close("193", when = time_close >= 1575492900000 and time_close - 1575500100000 < 7200000)
+
+strategy.order("194", 0, 34.24, 7441.992, when = time_close == 1575165600000)
+strategy.order("194", 0, 11.2992, 7356.0, when = time_close == 1575194400000)
+strategy.close("194", when = time_close >= 1575465900000 and time_close - 1575473100000 < 7200000)
+
+strategy.order("195", 0, 41.536, 8824.8, when = time_close == 1573459200000)
+strategy.order("195", 0, 13.706880000000002, 8690.9, when = time_close == 1573740000000)
+strategy.close("195", when = time_close == 1574870400000)
+
+strategy.order("196", 1, 24.984, 9074.9, when = time_close == 1573423200000)
+strategy.close("196", when = time_close >= 1573454760000 and time_close - 1573461960000 < 7200000)
+
+strategy.order("197", 0, 24.072, 9289.6, when = time_close == 1573106400000)
+strategy.order("197", 0, 7.94376, 9204.8, when = time_close == 1573149600000)
+strategy.close("197", when = time_close == 1573423200000)
+
+strategy.order("198", 1, 24.0, 9287.0, when = time_close == 1572876000000)
+strategy.order("198", 1, 7.92, 9418.0, when = time_close == 1572933600000)
+strategy.close("198", when = time_close == 1573106400000)
+
+strategy.order("199", 0, 24.416, 9201.8, when = time_close == 1572789600000)
+strategy.close("199", when = time_close == 1572876000000)
+
+strategy.order("200", 1, 24.288, 9300.0, when = time_close == 1572645600000)
+strategy.order("200", 1, 8.01504, 9332.7, when = time_close == 1572717600000)
+strategy.close("200", when = time_close == 1572789600000)
+
+strategy.order("201", 0, 203.096, 9185.6, when = time_close == 1572566400000)
+strategy.close("201", when = time_close == 1572645600000)
+
+strategy.order("202", 1, 125.144, 9252.8, when = time_close == 1572537600000)
+strategy.close("202", when = time_close == 1572566400000)
+
+strategy.order("203", 0, 82.28, 9138.04, when = time_close == 1572436800000)
+strategy.close("203", when = time_close >= 1572524100000 and time_close - 1572531300000 < 7200000)
+
+strategy.order("204", 0, 57.824, 8054.3, when = time_close == 1571788800000)
+strategy.order("204", 0, 19.08192, 8015.6, when = time_close == 1571824800000)
+strategy.close("204", when = time_close >= 1572018600000 and time_close - 1572025800000 < 7200000)
+
+strategy.order("205", 1, 34.52, 8178.9, when = time_close == 1571594400000)
+strategy.order("205", 1, 11.391600000000002, 8255.4, when = time_close == 1571630400000)
+strategy.close("205", when = time_close == 1571788800000)
+
+strategy.order("206", 0, 90.936, 8304.9, when = time_close == 1571011200000)
+strategy.order("206", 0, 30.008880000000005, 8194.9, when = time_close == 1571191200000)
+strategy.close("206", when = time_close == 1571594400000)
+
+strategy.order("207", 1, 56.368, 8438.4, when = time_close == 1570975200000)
+strategy.close("207", when = time_close >= 1570997820000 and time_close - 1571005020000 < 7200000)
+
+strategy.order("208", 0, 34.456, 8373.0, when = time_close == 1570809600000)
+strategy.close("208", when = time_close == 1570975200000)
+
+strategy.order("209", 1, 34.312, 8299.285, when = time_close == 1570471200000)
+strategy.order("209", 1, 11.32296, 8586.593, when = time_close == 1570658400000)
+strategy.close("209", when = time_close == 1570809600000)
+
+strategy.order("210", 0, 34.504, 8250.046, when = time_close == 1570111200000)
+strategy.order("210", 0, 11.38632, 8123.9, when = time_close == 1570291200000)
+strategy.close("210", when = time_close == 1570471200000)
+
+strategy.order("211", 1, 271.528, 8299.0, when = time_close == 1570046400000)
+strategy.close("211", when = time_close == 1570111200000)
+
+strategy.order("212", 0, 169.304, 8243.8, when = time_close == 1570024800000)
+strategy.close("212", when = time_close == 1570046400000)
+
+strategy.order("213", 1, 103.072, 8303.8, when = time_close == 1570017600000)
+strategy.close("213", when = time_close == 1570024800000)
+
+strategy.order("214", 0, 63.264, 8241.3, when = time_close == 1570003200000)
+strategy.close("214", when = time_close == 1570017600000)
+
+strategy.order("215", 1, 38.072, 8312.1, when = time_close == 1569873600000)
+strategy.close("215", when = time_close == 1570003200000)
+
+strategy.order("216", 0, 99.152, 10125.075, when = time_close == 1569045600000)
+strategy.order("216", 0, 32.72016, 10073.084, when = time_close == 1569081600000)
+strategy.close("216", when = time_close == 1569873600000)
+
+strategy.order("217", 1, 60.656, 10239.0, when = time_close == 1568944800000)
+strategy.close("217", when = time_close == 1569045600000)
+
+strategy.order("218", 0, 36.544, 10178.0, when = time_close == 1568642400000)
+strategy.order("218", 0, 12.05952, 9893.4, when = time_close == 1568887200000)
+strategy.close("218", when = time_close == 1568944800000)
+
+strategy.order("219", 1, 21.84, 10346.0, when = time_close == 1568304000000)
+strategy.order("219", 1, 7.2072, 10380.0, when = time_close == 1568340000000)
+strategy.close("219", when = time_close == 1568642400000)
+
+strategy.order("220", 0, 58.376, 10400.723, when = time_close == 1567951200000)
+strategy.order("220", 0, 19.26408, 10121.0, when = time_close == 1568160000000)
+strategy.close("220", when = time_close == 1568304000000)
+
+strategy.order("221", 1, 35.36, 10541.0, when = time_close == 1567893600000)
+strategy.close("221", when = time_close == 1567951200000)
+
+strategy.order("222", 0, 22.208, 10305.0, when = time_close == 1567814400000)
+strategy.close("222", when = time_close == 1567893600000)
+
+strategy.order("223", 1, 22.424, 9779.1, when = time_close == 1567382400000)
+strategy.order("223", 1, 7.39992, 10351.923, when = time_close == 1567476000000)
+strategy.close("223", when = time_close == 1567814400000)
+
+strategy.order("224", 0, 128.208, 10155.0, when = time_close == 1566900000000)
+strategy.order("224", 0, 42.308640000000004, 9477.915, when = time_close == 1567080000000)
+strategy.close("224", when = time_close == 1567382400000)
+
+strategy.order("225", 1, 83.856, 10446.0, when = time_close == 1566784800000)
+strategy.close("225", when = time_close == 1566900000000)
+
+strategy.order("226", 0, 56.904, 9996.0, when = time_close == 1566640800000)
+strategy.close("226", when = time_close >= 1566737640000 and time_close - 1566744840000 < 7200000)
+
+strategy.order("227", 1, 33.952, 10392.0, when = time_close == 1566576000000)
+strategy.order("227", 1, 11.20416, 10408.0, when = time_close == 1566604800000)
+strategy.close("227", when = time_close >= 1566638340000 and time_close - 1566645540000 < 7200000)
+
+strategy.order("228", 1, 20.44, 10383.0, when = time_close == 1566158400000)
+strategy.order("228", 1, 6.7452000000000005, 10734.0, when = time_close == 1566230400000)
+strategy.close("228", when = time_close == 1566367200000)
+
+strategy.order("229", 0, 17.824, 11379.0, when = time_close == 1565438400000)
+strategy.order("229", 0, 5.881920000000001, 11368.0, when = time_close == 1565488800000)
+strategy.close("229", when = time_close == 1566158400000)
+
+strategy.order("230", 1, 29.776, 9716.0, when = time_close == 1564538400000)
+strategy.order("230", 1, 9.826080000000001, 9997.7, when = time_close == 1564603200000)
+strategy.close("230", when = time_close == 1565438400000)
+
+strategy.order("231", 1, 17.664, 10129.0, when = time_close == 1564200000000)
+strategy.close("231", when = time_close >= 1564223040000 and time_close - 1564230240000 < 7200000)
+
+strategy.order("232", 0, 46.816, 10222.0, when = time_close == 1563811200000)
+strategy.order("232", 0, 15.449280000000002, 9955.0, when = time_close == 1563890400000)
+strategy.close("232", when = time_close == 1564200000000)
+
+strategy.order("233", 1, 28.544, 10558.0, when = time_close == 1563746400000)
+strategy.close("233", when = time_close >= 1563806580000 and time_close - 1563813780000 < 7200000)
+
+strategy.order("234", 0, 17.688, 10398.398, when = time_close == 1563739200000)
+strategy.close("234", when = time_close == 1563746400000)
+
+strategy.order("235", 0, 14.208, 11982.0, when = time_close == 1562810400000)
+strategy.order("235", 0, 4.68864, 11312.0, when = time_close == 1563062400000)
+strategy.close("235", when = time_close == 1563480000000)
+
+strategy.order("236", 1, 59.088, 11489.0, when = time_close == 1562522400000)
+strategy.order("236", 1, 19.49904, 11918.0, when = time_close == 1562608800000)
+strategy.close("236", when = time_close == 1562810400000)
+
+strategy.order("237", 0, 39.096, 11173.749, when = time_close == 1562472000000)
+strategy.close("237", when = time_close == 1562522400000)
+
+strategy.order("238", 1, 23.888, 11518.0, when = time_close == 1562385600000)
+strategy.close("238", when = time_close >= 1562448660000 and time_close - 1562455860000 < 7200000)
+
+strategy.order("239", 0, 15.288, 11134.0, when = time_close == 1562306400000)
+strategy.close("239", when = time_close == 1562385600000)
+
+strategy.order("240", 0, 38.488, 11551.0, when = time_close == 1561896000000)
+strategy.order("240", 0, 12.70104, 11100.0, when = time_close == 1561953600000)
+strategy.close("240", when = time_close == 1562126400000)
+
+strategy.order("241", 1, 23.416, 11958.0, when = time_close == 1561809600000)
+strategy.close("241", when = time_close >= 1561891140000 and time_close - 1561898340000 < 7200000)
+
+strategy.order("242", 0, 14.896, 11610.0, when = time_close == 1561802400000)
+strategy.close("242", when = time_close == 1561809600000)
+
+strategy.order("243", 1, 69.44, 7911.9, when = time_close == 1560290400000)
+strategy.order("243", 1, 22.9152, 8150.0, when = time_close == 1560376800000)
+strategy.close("243", when = time_close == 1561168800000)
+
+strategy.order("244", 0, 44.992, 7797.3, when = time_close == 1560261600000)
+strategy.close("244", when = time_close == 1560290400000)
+
+strategy.order("245", 1, 27.744, 7935.0, when = time_close == 1560182400000)
+strategy.close("245", when = time_close == 1560261600000)
+
+strategy.order("246", 0, 16.888, 7844.4, when = time_close == 1560016800000)
+strategy.order("246", 0, 5.573040000000001, 7624.8, when = time_close == 1560132000000)
+strategy.close("246", when = time_close == 1560182400000)
+
+strategy.order("247", 1, 10.152, 7953.921, when = time_close == 1559923200000)
+strategy.close("247", when = time_close == 1560016800000)
+
+strategy.order("248", 0, 14.584, 8478.7, when = time_close == 1559556000000)
+strategy.order("248", 0, 4.81272, 7900.0, when = time_close == 1559635200000)
+strategy.close("248", when = time_close == 1559923200000)
+
+strategy.order("249", 1, 8.72, 8572.3, when = time_close == 1559383200000)
+strategy.order("249", 1, 2.8776, 8679.1, when = time_close == 1559484000000)
+strategy.close("249", when = time_close == 1559556000000)
+
+strategy.order("250", 1, 15.032, 7871.9, when = time_close == 1558656000000)
+strategy.order("250", 1, 4.96056, 8057.0, when = time_close == 1558728000000)
+strategy.close("250", when = time_close == 1559253600000)
+
+strategy.order("251", 0, 9.44, 7672.9, when = time_close == 1558562400000)
+strategy.order("251", 0, 3.1152, 7619.7114, when = time_close == 1558591200000)
+strategy.close("251", when = time_close >= 1558648080000 and time_close - 1558655280000 < 7200000)
+
+strategy.order("252", 1, 44.4, 5467.6, when = time_close == 1556568000000)
+strategy.order("252", 1, 14.652000000000001, 5577.1, when = time_close == 1556654400000)
+strategy.close("252", when = time_close == 1557619200000)
+
+strategy.order("253", 0, 28.392, 5402.8, when = time_close == 1556553600000)
+strategy.close("253", when = time_close == 1556568000000)
+
+strategy.order("254", 1, 17.048, 5436.9, when = time_close == 1556416800000)
+strategy.order("254", 1, 5.625839999999999, 5494.8, when = time_close == 1556474400000)
+strategy.close("254", when = time_close == 1556553600000)
+
+strategy.order("255", 1, 10.616, 5499.2, when = time_close == 1556193600000)
+strategy.close("255", when = time_close >= 1556229780000 and time_close - 1556236980000 < 7200000)
+
+strategy.order("256", 0, 6.52, 5442.4463, when = time_close == 1556186400000)
+strategy.close("256", when = time_close == 1556193600000)
+
+strategy.order("257", 1, 28.248, 5307.3, when = time_close == 1555920000000)
+strategy.order("257", 1, 9.321840000000002, 5410.8, when = time_close == 1555984800000)
+strategy.close("257", when = time_close == 1556186400000)
+
+strategy.order("258", 0, 17.352, 5278.2456, when = time_close == 1555905600000)
+strategy.close("258", when = time_close == 1555920000000)
+
+strategy.order("259", 1, 10.488, 5321.9, when = time_close == 1555891200000)
+strategy.close("259", when = time_close == 1555905600000)
+
+strategy.order("260", 0, 6.408, 5282.1, when = time_close == 1555876800000)
+strategy.close("260", when = time_close == 1555891200000)
+
+strategy.order("261", 1, 28.944, 5235.685, when = time_close == 1555437600000)
+strategy.order("261", 1, 9.55152, 5250.0, when = time_close == 1555488000000)
+strategy.close("261", when = time_close == 1555876800000)
+
+strategy.order("262", 0, 19.552, 5033.2, when = time_close == 1555358400000)
+strategy.close("262", when = time_close >= 1555435800000 and time_close - 1555443000000 < 7200000)
+
+strategy.order("263", 1, 11.704, 5142.0176, when = time_close == 1555279200000)
+strategy.order("263", 1, 3.8623200000000004, 5194.2, when = time_close == 1555315200000)
+strategy.close("263", when = time_close == 1555358400000)
+
+strategy.order("264", 0, 7.16, 5090.0, when = time_close == 1554976800000)
+strategy.order("264", 0, 2.3628, 5073.0835, when = time_close == 1555005600000)
+strategy.close("264", when = time_close == 1555279200000)
+
+strategy.order("265", 1, 11.72, 4058.6, when = time_close == 1553666400000)
+strategy.order("265", 1, 3.8676000000000004, 4080.2, when = time_close == 1553709600000)
+strategy.close("265", when = time_close == 1554688800000)
+
+strategy.order("266", 0, 7.088, 4036.7, when = time_close == 1553191200000)
+strategy.order("266", 0, 2.3390400000000002, 3970.0, when = time_close == 1553558400000)
+strategy.close("266", when = time_close == 1553666400000)
+
+strategy.order("267", 1, 11.76, 3961.6, when = time_close == 1552622400000)
+strategy.order("267", 1, 3.8808000000000002, 4000.0, when = time_close == 1552687200000)
+strategy.close("267", when = time_close == 1553191200000)
+
+strategy.order("268", 0, 7.096, 3954.1, when = time_close == 1552305600000)
+strategy.order("268", 0, 2.34168, 3926.6, when = time_close == 1552377600000)
+strategy.close("268", when = time_close == 1552622400000)
+
+strategy.order("269", 1, 52.728, 3923.0, when = time_close == 1551801600000)
+strategy.order("269", 1, 17.40024, 3928.8345, when = time_close == 1551837600000)
+strategy.close("269", when = time_close == 1552305600000)
+
+strategy.order("270", 0, 31.224, 3907.3, when = time_close == 1551506400000)
+strategy.order("270", 0, 10.30392, 3797.0, when = time_close == 1551708000000)
+strategy.close("270", when = time_close == 1551801600000)
+
+strategy.order("271", 1, 19.04, 3941.6, when = time_close == 1551463200000)
+strategy.close("271", when = time_close == 1551506400000)
+
+strategy.order("272", 0, 11.76, 3901.9, when = time_close == 1551376800000)
+strategy.close("272", when = time_close == 1551463200000)
+
+strategy.order("273", 1, 7.072, 3944.0, when = time_close == 1551369600000)
+strategy.close("273", when = time_close == 1551376800000)
+
+strategy.order("274", 1, 30.88, 3681.0, when = time_close == 1550282400000)
+strategy.order("274", 1, 10.1904, 3697.3, when = time_close == 1550340000000)
+strategy.close("274", when = time_close == 1551031200000)
+
+strategy.order("275", 0, 19.056, 3655.6, when = time_close == 1550246400000)
+strategy.close("275", when = time_close == 1550282400000)
+
+strategy.order("276", 1, 11.512, 3680.0, when = time_close == 1550210400000)
+strategy.close("276", when = time_close == 1550246400000)
+
+strategy.order("277", 0, 7.032, 3652.9, when = time_close == 1550073600000)
+strategy.close("277", when = time_close == 1550210400000)
+
+strategy.order("278", 1, 7.08, 3491.0447, when = time_close == 1549627200000)
+strategy.order("278", 1, 2.3364000000000003, 3693.5, when = time_close == 1549663200000)
+strategy.close("278", when = time_close == 1550073600000)
+
+strategy.order("279", 0, 7.2, 3460.7, when = time_close == 1549418400000)
+strategy.close("279", when = time_close == 1549627200000)
+
+strategy.order("280", 1, 59.52, 3513.0, when = time_close == 1549411200000)
+strategy.close("280", when = time_close == 1549418400000)
+
+strategy.order("281", 0, 36.096, 3510.1, when = time_close == 1549195200000)
+strategy.close("281", when = time_close == 1549411200000)
+
+strategy.order("282", 1, 22.024, 3542.0, when = time_close == 1549051200000)
+strategy.close("282", when = time_close == 1549195200000)
+
+strategy.order("283", 0, 13.664, 3498.9, when = time_close == 1548936000000)
+strategy.close("283", when = time_close == 1549051200000)
+
+strategy.order("284", 1, 8.192, 3529.6, when = time_close == 1548892800000)
+strategy.order("284", 1, 2.70336, 3546.0, when = time_close == 1548914400000)
+strategy.close("284", when = time_close == 1548936000000)
+
+strategy.order("285", 0, 7.856, 3626.0, when = time_close == 1548568800000)
+strategy.order("285", 0, 2.59248, 3608.9402, when = time_close == 1548604800000)
+strategy.close("285", when = time_close == 1548892800000)
+
+strategy.order("286", 1, 7.856, 3642.9, when = time_close == 1548475200000)
+strategy.close("286", when = time_close == 1548568800000)
+
+strategy.order("287", 0, 8.008, 3605.9, when = time_close == 1548417600000)
+strategy.close("287", when = time_close == 1548475200000)
+
+strategy.order("288", 1, 7.992, 3656.8, when = time_close == 1548360000000)
+strategy.close("288", when = time_close == 1548417600000)
+
+strategy.order("289", 0, 8.2, 3605.5, when = time_close == 1548273600000)
+strategy.close("289", when = time_close == 1548360000000)
+
+strategy.order("290", 1, 8.192, 3643.5, when = time_close == 1548208800000)
+strategy.close("290", when = time_close == 1548273600000)
+
+strategy.order("291", 0, 8.384, 3590.3, when = time_close == 1547992800000)
+strategy.order("291", 0, 2.7667200000000003, 3586.1, when = time_close == 1548028800000)
+strategy.close("291", when = time_close == 1548208800000)
+
+strategy.order("292", 1, 8.224, 3703.8, when = time_close == 1547877600000)
+strategy.order("292", 1, 2.7139200000000003, 3781.5, when = time_close == 1547928000000)
+strategy.close("292", when = time_close >= 1547986500000 and time_close - 1547993700000 < 7200000)
+
+strategy.order("293", 0, 8.368, 3669.8, when = time_close == 1547820000000)
+strategy.close("293", when = time_close == 1547877600000)
+
+strategy.order("294", 1, 8.352, 3722.5, when = time_close == 1547769600000)
+strategy.close("294", when = time_close == 1547820000000)
+
+strategy.order("295", 0, 8.688, 3644.0, when = time_close == 1547589600000)
+strategy.close("295", when = time_close == 1547769600000)
+
+strategy.order("296", 1, 8.664, 3751.0, when = time_close == 1547503200000)
+strategy.close("296", when = time_close >= 1547584860000 and time_close - 1547592060000 < 7200000)
+
+strategy.order("297", 0, 8.52, 3918.4, when = time_close == 1546740000000)
+strategy.close("297", when = time_close >= 1546795020000 and time_close - 1546802220000 < 7200000)
+
+strategy.order("298", 1, 8.496, 3981.0051, when = time_close == 1546653600000)
+strategy.close("298", when = time_close == 1546740000000)
+
+strategy.order("299", 0, 8.728, 3924.3, when = time_close == 1546560000000)
+strategy.close("299", when = time_close == 1546653600000)
+
+strategy.order("300", 1, 8.664, 3939.7, when = time_close == 1546394400000)
+strategy.order("300", 1, 2.85912, 4023.9, when = time_close == 1546480800000)
+strategy.close("300", when = time_close == 1546560000000)
+
+strategy.order("301", 0, 67.136, 3900.2, when = time_close == 1546228800000)
+strategy.order("301", 0, 22.15488, 3829.1462, when = time_close == 1546308000000)
+strategy.close("301", when = time_close == 1546394400000)
+
+strategy.order("302", 1, 41.832, 3944.8, when = time_close == 1546192800000)
+strategy.close("302", when = time_close == 1546228800000)
+
+strategy.order("303", 0, 25.544, 3930.3, when = time_close == 1546185600000)
+strategy.close("303", when = time_close == 1546192800000)
+
+strategy.order("304", 1, 15.448, 3967.0, when = time_close == 1546171200000)
+strategy.close("304", when = time_close == 1546185600000)
+
+strategy.order("305", 0, 9.68, 3883.3, when = time_close == 1546142400000)
+strategy.close("305", when = time_close == 1546171200000)
+
+strategy.order("306", 1, 9.488, 3362.9482, when = time_close == 1545048000000)
+strategy.order("306", 1, 3.13104, 3625.0, when = time_close == 1545091200000)
+strategy.close("306", when = time_close == 1545631200000)
+
+strategy.order("307", 0, 58.448, 3474.5, when = time_close == 1544666400000)
+strategy.order("307", 0, 19.287840000000003, 3357.8, when = time_close == 1544774400000)
+strategy.close("307", when = time_close == 1545048000000)
+
+strategy.order("308", 1, 36.952, 3532.5, when = time_close == 1544644800000)
+strategy.close("308", when = time_close == 1544666400000)
+
+strategy.order("309", 0, 22.2, 3513.2, when = time_close == 1544457600000)
+strategy.order("309", 0, 7.3260000000000005, 3425.6, when = time_close == 1544558400000)
+strategy.close("309", when = time_close == 1544644800000)
+
+strategy.order("310", 1, 13.36, 3676.2, when = time_close == 1544378400000)
+strategy.close("310", when = time_close >= 1544433360000 and time_close - 1544440560000 < 7200000)
+
+strategy.order("311", 1, 7.176, 4082.2, when = time_close == 1543399200000)
+strategy.order("311", 1, 2.36808, 4286.4, when = time_close == 1543442400000)
+strategy.close("311", when = time_close == 1543586400000)
+
+strategy.order("312", 0, 3.896, 6379.8, when = time_close == 1542196800000)
+strategy.order("312", 0, 1.28568, 5922.4, when = time_close == 1542240000000)
+strategy.close("312", when = time_close == 1542765600000)
+
+strategy.order("313", 1, 3.888, 6457.0, when = time_close == 1542124800000)
+strategy.close("313", when = time_close == 1542196800000)
+
+strategy.order("314", 0, 3.912, 6439.8, when = time_close == 1542103200000)
+strategy.close("314", when = time_close == 1542124800000)
+
+strategy.order("315", 1, 30.208, 6454.1, when = time_close == 1542096000000)
+strategy.close("315", when = time_close == 1542103200000)
+
+strategy.order("316", 0, 18.552, 6431.2, when = time_close == 1542060000000)
+strategy.close("316", when = time_close == 1542096000000)
+
+strategy.order("317", 1, 11.248, 6456.1, when = time_close == 1542052800000)
+strategy.close("317", when = time_close == 1542060000000)
+
+strategy.order("318", 0, 6.808, 6444.2, when = time_close == 1542045600000)
+strategy.close("318", when = time_close == 1542052800000)
+
+strategy.order("319", 1, 4.104, 6464.612, when = time_close == 1542031200000)
+strategy.close("319", when = time_close == 1542045600000)
+
+strategy.order("320", 0, 4.088, 6475.3, when = time_close == 1541721600000)
+strategy.order("320", 0, 1.34904, 6436.9, when = time_close == 1541786400000)
+strategy.close("320", when = time_close == 1542031200000)
+
+strategy.order("321", 1, 11.168, 6416.8, when = time_close == 1541340000000)
+strategy.order("321", 1, 3.68544, 6473.0, when = time_close == 1541383200000)
+strategy.close("321", when = time_close == 1541721600000)
+
+strategy.order("322", 0, 6.88, 6359.9, when = time_close == 1541246400000)
+strategy.close("322", when = time_close == 1541340000000)
+
+strategy.order("323", 1, 4.128, 6406.1, when = time_close == 1541116800000)
+strategy.order("323", 1, 1.3622400000000001, 6423.3, when = time_close == 1541138400000)
+strategy.close("323", when = time_close == 1541246400000)
+
+strategy.order("324", 0, 17.208, 6569.2, when = time_close == 1540411200000)
+strategy.order("324", 0, 5.67864, 6500.0, when = time_close == 1540677600000)
+strategy.close("324", when = time_close == 1541116800000)
+
+strategy.order("325", 1, 10.456, 6605.408, when = time_close == 1540368000000)
+strategy.close("325", when = time_close == 1540411200000)
+
+strategy.order("326", 0, 6.296, 6600.0, when = time_close == 1540173600000)
+strategy.order("326", 0, 2.07768, 6570.6, when = time_close == 1540245600000)
+strategy.close("326", when = time_close == 1540368000000)
+
+strategy.order("327", 1, 3.792, 6621.2, when = time_close == 1540116000000)
+strategy.order("327", 1, 1.25136, 6626.4, when = time_close == 1540144800000)
+strategy.close("327", when = time_close == 1540173600000)
+
+strategy.order("328", 0, 3.768, 6638.1, when = time_close == 1539892800000)
+strategy.order("328", 0, 1.24344, 6599.9, when = time_close == 1539914400000)
+strategy.close("328", when = time_close == 1540116000000)
+
+strategy.order("329", 1, 9.656, 6379.4, when = time_close == 1539576000000)
+strategy.order("329", 1, 3.1864800000000004, 6931.9004, when = time_close == 1539612000000)
+strategy.close("329", when = time_close == 1539892800000)
+
+strategy.order("330", 0, 5.88, 6352.0, when = time_close == 1539554400000)
+strategy.close("330", when = time_close == 1539576000000)
+
+strategy.order("331", 1, 3.536, 6396.8774, when = time_close == 1539547200000)
+strategy.close("331", when = time_close == 1539554400000)
+
+strategy.order("332", 0, 3.392, 6538.1, when = time_close == 1539151200000)
+strategy.order("332", 0, 1.11936, 6303.9, when = time_close == 1539266400000)
+strategy.close("332", when = time_close == 1539547200000)
+
+strategy.order("333", 1, 3.368, 6609.4, when = time_close == 1538956800000)
+strategy.order("333", 1, 1.11144, 6687.658, when = time_close == 1539036000000)
+strategy.close("333", when = time_close == 1539151200000)
+
+strategy.order("334", 0, 3.416, 6558.6, when = time_close == 1538906400000)
+strategy.close("334", when = time_close == 1538956800000)
+
+strategy.order("335", 1, 3.416, 6591.8, when = time_close == 1538632800000)
+strategy.close("335", when = time_close == 1538906400000)
+
+strategy.order("336", 0, 3.416, 6571.6, when = time_close == 1538481600000)
+strategy.order("336", 0, 1.12728, 6462.7, when = time_close == 1538560800000)
+strategy.close("336", when = time_close == 1538632800000)
+
+strategy.order("337", 1, 3.416, 6612.113, when = time_close == 1538445600000)
+strategy.close("337", when = time_close == 1538481600000)
+
+strategy.order("338", 0, 27.632, 6560.0, when = time_close == 1538409600000)
+strategy.close("338", when = time_close == 1538445600000)
+
+strategy.order("339", 1, 16.928, 6594.625, when = time_close == 1538244000000)
+strategy.close("339", when = time_close == 1538409600000)
+
+strategy.order("340", 0, 10.712, 6498.7485, when = time_close == 1538193600000)
+strategy.close("340", when = time_close == 1538244000000)
+
+strategy.order("341", 1, 6.464, 6673.5, when = time_close == 1538078400000)
+strategy.order("341", 1, 2.1331200000000003, 6705.5, when = time_close == 1538107200000)
+strategy.close("341", when = time_close >= 1538185080000 and time_close - 1538192280000 < 7200000)
+
+strategy.order("342", 0, 3.952, 6582.3, when = time_close == 1537790400000)
+strategy.order("342", 0, 1.30416, 6419.3, when = time_close == 1537869600000)
+strategy.close("342", when = time_close == 1538078400000)
+
+strategy.order("343", 1, 3.952, 6390.9, when = time_close == 1537401600000)
+strategy.order("343", 1, 1.30416, 6730.0, when = time_close == 1537538400000)
+strategy.close("343", when = time_close == 1537790400000)
+
+strategy.order("344", 0, 3.904, 6419.1, when = time_close == 1537192800000)
+strategy.order("344", 0, 1.2883200000000001, 6252.0, when = time_close == 1537228800000)
+strategy.close("344", when = time_close == 1537401600000)
+
+strategy.order("345", 1, 3.896, 6398.0, when = time_close == 1536804000000)
+strategy.order("345", 1, 1.28568, 6479.9, when = time_close == 1536854400000)
+strategy.close("345", when = time_close == 1537192800000)
+
+strategy.order("346", 1, 5.84, 6938.7754, when = time_close == 1535680800000)
+strategy.order("346", 1, 1.9272, 7192.4, when = time_close == 1535839200000)
+strategy.close("346", when = time_close == 1536148800000)
+
+strategy.order("347", 0, 3.6, 6850.3, when = time_close == 1535637600000)
+strategy.close("347", when = time_close == 1535680800000)
+
+strategy.order("348", 1, 3.656, 6527.2, when = time_close == 1535068800000)
+strategy.order("348", 1, 1.20648, 6730.6, when = time_close == 1535176800000)
+strategy.close("348", when = time_close == 1535637600000)
+
+strategy.order("349", 0, 3.824, 6368.3, when = time_close == 1534975200000)
+strategy.close("349", when = time_close == 1535068800000)
+
+strategy.order("350", 1, 3.776, 6425.0, when = time_close == 1534867200000)
+strategy.order("350", 1, 1.24608, 6657.9, when = time_close == 1534924800000)
+strategy.close("350", when = time_close == 1534975200000)
+
+strategy.order("351", 0, 3.984, 6255.9, when = time_close == 1534809600000)
+strategy.close("351", when = time_close >= 1534838700000 and time_close - 1534845900000 < 7200000)
+
+strategy.order("352", 1, 3.936, 6495.4, when = time_close == 1534716000000)
+strategy.close("352", when = time_close >= 1534806060000 and time_close - 1534813260000 < 7200000)
+
+strategy.order("353", 0, 4.104, 6349.3, when = time_close == 1534701600000)
+strategy.close("353", when = time_close == 1534716000000)
+
+strategy.order("354", 1, 34.192, 6452.4, when = time_close == 1534687200000)
+strategy.close("354", when = time_close == 1534701600000)
+
+strategy.order("355", 0, 22.496, 6339.4, when = time_close == 1534615200000)
+strategy.close("355", when = time_close == 1534687200000)
+
+strategy.order("356", 1, 13.472, 6411.4004, when = time_close == 1534320000000)
+strategy.order("356", 1, 4.44576, 6523.7, when = time_close == 1534564800000)
+strategy.close("356", when = time_close == 1534615200000)
+
+strategy.order("357", 0, 8.496, 6230.0, when = time_close == 1534183200000)
+strategy.order("357", 0, 2.8036800000000004, 6043.6, when = time_close == 1534240800000)
+strategy.close("357", when = time_close >= 1534318560000 and time_close - 1534325760000 < 7200000)
+
+strategy.order("358", 1, 5.08, 6436.4, when = time_close == 1534147200000)
+strategy.close("358", when = time_close >= 1534180020000 and time_close - 1534187220000 < 7200000)
+
+strategy.order("359", 0, 8.28, 8132.0, when = time_close == 1532966400000)
+strategy.order("359", 0, 2.7323999999999997, 7755.9, when = time_close == 1533067200000)
+strategy.close("359", when = time_close == 1534147200000)
+
+strategy.order("360", 1, 5.0, 8175.1, when = time_close == 1532714400000)
+strategy.close("360", when = time_close == 1532966400000)
+
+strategy.order("361", 0, 3.2, 7898.2, when = time_close == 1532656800000)
+strategy.close("361", when = time_close >= 1532705160000 and time_close - 1532712360000 < 7200000)
+
+strategy.order("362", 1, 3.432, 6351.9, when = time_close == 1531656000000)
+strategy.order("362", 1, 1.13256, 6359.0, when = time_close == 1531684800000)
+strategy.close("362", when = time_close == 1532433600000)
+
+strategy.order("363", 0, 3.192, 6628.1, when = time_close == 1531202400000)
+strategy.order("363", 0, 1.05336, 6380.1, when = time_close == 1531238400000)
+strategy.close("363", when = time_close == 1531656000000)
+
+strategy.order("364", 1, 3.176, 6761.8, when = time_close == 1531008000000)
+strategy.close("364", when = time_close == 1531202400000)
+
+strategy.order("365", 0, 31.232, 6531.6, when = time_close == 1531000800000)
+strategy.close("365", when = time_close >= 1531005960000 and time_close - 1531013160000 < 7200000)
+
+strategy.order("366", 1, 19.144, 6566.5, when = time_close == 1530892800000)
+strategy.close("366", when = time_close == 1531000800000)
+
+strategy.order("367", 0, 11.752, 6516.0, when = time_close == 1530842400000)
+strategy.order("367", 0, 3.8781600000000003, 6502.0, when = time_close == 1530871200000)
+strategy.close("367", when = time_close == 1530892800000)
+
+strategy.order("368", 0, 7.648, 6176.2, when = time_close == 1530021600000)
+strategy.order("368", 0, 2.52384, 6080.1, when = time_close == 1530086400000)
+strategy.close("368", when = time_close >= 1530322500000 and time_close - 1530329700000 < 7200000)
+
+strategy.order("369", 1, 4.592, 6278.0, when = time_close == 1529949600000)
+strategy.close("369", when = time_close == 1530021600000)
+
+strategy.order("370", 0, 6.992, 6501.0, when = time_close == 1529654400000)
+strategy.order("370", 0, 2.30736, 6147.6, when = time_close == 1529690400000)
+strategy.close("370", when = time_close == 1529949600000)
+
+strategy.order("371", 1, 4.176, 6727.0, when = time_close == 1529344800000)
+strategy.close("371", when = time_close >= 1529651460000 and time_close - 1529658660000 < 7200000)
+
+strategy.order("372", 0, 3.448, 7593.4, when = time_close == 1528552800000)
+strategy.order("372", 0, 1.13784, 7232.2, when = time_close == 1528624800000)
+strategy.close("372", when = time_close == 1529344800000)
+
+strategy.order("373", 1, 3.448, 7656.7, when = time_close == 1528480800000)
+strategy.close("373", when = time_close == 1528552800000)
+
+strategy.order("374", 0, 3.528, 7563.4, when = time_close == 1528459200000)
+strategy.close("374", when = time_close == 1528480800000)
+
+strategy.order("375", 1, 3.52, 7623.1, when = time_close == 1528228800000)
+strategy.close("375", when = time_close == 1528459200000)
+
+strategy.order("376", 0, 3.6, 7507.0, when = time_close == 1528120800000)
+strategy.order("376", 0, 1.1880000000000002, 7423.9, when = time_close == 1528192800000)
+strategy.close("376", when = time_close == 1528228800000)
+
+strategy.order("377", 1, 26.904, 7521.0, when = time_close == 1527897600000)
+strategy.order("377", 1, 8.87832, 7621.8, when = time_close == 1527955200000)
+strategy.close("377", when = time_close == 1528120800000)
+
+strategy.order("378", 0, 17.336, 7419.9, when = time_close == 1527876000000)
+strategy.close("378", when = time_close == 1527897600000)
+
+strategy.order("379", 1, 10.592, 7497.2, when = time_close == 1527746400000)
+strategy.close("379", when = time_close == 1527876000000)
+
+strategy.order("380", 0, 6.776, 7311.6, when = time_close == 1527710400000)
+strategy.close("380", when = time_close == 1527746400000)
+
+strategy.order("381", 1, 4.064, 7505.3, when = time_close == 1527616800000)
+strategy.close("381", when = time_close == 1527710400000)
+
+strategy.order("382", 0, 13.464, 8313.5, when = time_close == 1526961600000)
+strategy.order("382", 0, 4.44312, 8230.1, when = time_close == 1527004800000)
+strategy.close("382", when = time_close == 1527616800000)
+
+strategy.order("383", 1, 8.008, 8344.7, when = time_close == 1526810400000)
+strategy.order("383", 1, 2.6426399999999997, 8523.7, when = time_close == 1526860800000)
+strategy.close("383", when = time_close == 1526961600000)
+
+strategy.order("384", 0, 5.04, 8195.1, when = time_close == 1526767200000)
+strategy.close("384", when = time_close == 1526810400000)
+
+strategy.order("385", 1, 3.024, 8307.9, when = time_close == 1526745600000)
+strategy.close("385", when = time_close == 1526767200000)
+
+strategy.order("386", 0, 4.688, 8553.8, when = time_close == 1526407200000)
+strategy.order("386", 0, 1.54704, 8225.1, when = time_close == 1526464800000)
+strategy.close("386", when = time_close == 1526745600000)
+
+strategy.order("387", 1, 2.832, 8753.5, when = time_close == 1526328000000)
+strategy.close("387", when = time_close >= 1526396580000 and time_close - 1526403780000 < 7200000)
+
+strategy.order("388", 0, 4.224, 9159.6, when = time_close == 1525975200000)
+strategy.order("388", 0, 1.39392, 8596.4, when = time_close == 1526061600000)
+strategy.close("388", when = time_close == 1526328000000)
+
+strategy.order("389", 1, 2.536, 9346.1, when = time_close == 1525946400000)
+strategy.close("389", when = time_close == 1525975200000)
+
+strategy.order("390", 0, 2.448, 9520.0, when = time_close == 1525622400000)
+strategy.order("390", 0, 0.80784, 9337.5, when = time_close == 1525694400000)
+strategy.close("390", when = time_close == 1525946400000)
+
+strategy.order("391", 1, 10.248, 9238.5, when = time_close == 1525298400000)
+strategy.order("391", 1, 3.38184, 9681.7, when = time_close == 1525384800000)
+strategy.close("391", when = time_close == 1525622400000)
+
+strategy.order("392", 0, 6.616, 8994.0, when = time_close == 1525140000000)
+strategy.order("392", 0, 2.18328, 8992.2, when = time_close == 1525197600000)
+strategy.close("392", when = time_close == 1525298400000)
+
+strategy.order("393", 1, 4.04, 9269.9, when = time_close == 1524787200000)
+strategy.close("393", when = time_close >= 1524861780000 and time_close - 1524868980000 < 7200000)
+
+strategy.order("394", 0, 2.608, 8869.2, when = time_close == 1524700800000)
+strategy.close("394", when = time_close >= 1524777900000 and time_close - 1524785100000 < 7200000)
+
+strategy.order("395", 1, 4.344, 8094.9, when = time_close == 1524045600000)
+strategy.order("395", 1, 1.4335200000000001, 8277.8, when = time_close == 1524204000000)
+strategy.close("395", when = time_close == 1524700800000)
+
+strategy.order("396", 0, 2.752, 7908.4, when = time_close == 1524002400000)
+strategy.close("396", when = time_close >= 1524034920000 and time_close - 1524042120000 < 7200000)
+
+strategy.order("397", 1, 4.632, 6940.0, when = time_close == 1523455200000)
+strategy.order("397", 1, 1.52856, 6940.1, when = time_close == 1523512800000)
+strategy.close("397", when = time_close == 1524002400000)
+
+strategy.order("398", 1, 2.808, 7003.8, when = time_close == 1523116800000)
+strategy.order("398", 1, 0.92664, 7040.0, when = time_close == 1523203200000)
+strategy.close("398", when = time_close >= 1523269320000 and time_close - 1523276520000 < 7200000)
+
+strategy.order("399", 0, 4.504, 7074.5, when = time_close == 1522850400000)
+strategy.order("399", 0, 1.4863199999999999, 6763.3, when = time_close == 1522900800000)
+strategy.close("399", when = time_close == 1523116800000)
+
+strategy.order("400", 1, 2.68, 7180.0, when = time_close == 1522728000000)
+strategy.order("400", 1, 0.8844000000000001, 7308.0, when = time_close == 1522756800000)
+strategy.close("400", when = time_close == 1522850400000)
+
+strategy.order("401", 0, 4.832, 8529.9, when = time_close == 1521943200000)
+strategy.order("401", 0, 1.59456, 7872.0, when = time_close == 1522101600000)
+strategy.close("401", when = time_close == 1522728000000)
+
+strategy.order("402", 1, 2.912, 8914.4, when = time_close == 1521849600000)
+strategy.close("402", when = time_close >= 1521927720000 and time_close - 1521934920000 < 7200000)
+
+strategy.order("403", 0, 1.84, 8598.1, when = time_close == 1521748800000)
+strategy.order("403", 0, 0.6072000000000001, 8480.0, when = time_close == 1521799200000)
+strategy.close("403", when = time_close >= 1521849240000 and time_close - 1521856440000 < 7200000)
+
+strategy.order("404", 1, 1.832, 8321.4, when = time_close == 1521439200000)
+strategy.order("404", 1, 0.6045600000000001, 8967.0, when = time_close == 1521597600000)
+strategy.close("404", when = time_close == 1521748800000)
+
+strategy.order("405", 0, 1.296, 10943.0, when = time_close == 1520337600000)
+strategy.order("405", 0, 0.42768000000000006, 10776.0, when = time_close == 1520373600000)
+strategy.close("405", when = time_close == 1520805600000)
+
+strategy.order("406", 1, 2.168, 8474.1, when = time_close == 1518408000000)
+strategy.order("406", 1, 0.7154400000000001, 8739.0, when = time_close == 1518487200000)
+strategy.close("406", when = time_close == 1518912000000)
+
+strategy.order("407", 0, 1.416, 8020.3, when = time_close == 1518321600000)
+strategy.close("407", when = time_close >= 1518351780000 and time_close - 1518358980000 < 7200000)
+
+strategy.order("408", 0, 0.872, 11236.0, when = time_close == 1517227200000)
+strategy.order("408", 0, 0.28776, 11074.0, when = time_close == 1517299200000)
+strategy.close("408", when = time_close == 1517824800000)
+
+strategy.order("409", 1, 0.856, 11512.0, when = time_close == 1517068800000)
+strategy.order("409", 1, 0.28248, 11820.0, when = time_close == 1517148000000)
+strategy.close("409", when = time_close >= 1517226420000 and time_close - 1517233620000 < 7200000)
+
+strategy.order("410", 0, 0.928, 10939.0, when = time_close == 1517054400000)
+strategy.close("410", when = time_close >= 1517067780000 and time_close - 1517074980000 < 7200000)
+
+strategy.order("411", 1, 8.6, 11219.0, when = time_close == 1517040000000)
+strategy.close("411", when = time_close >= 1517052720000 and time_close - 1517059920000 < 7200000)
+
+strategy.order("412", 1, 5.88, 11229.0, when = time_close == 1516910400000)
+strategy.close("412", when = time_close >= 1516954140000 and time_close - 1516961340000 < 7200000)
+
+strategy.order("413", 0, 3.768, 11023.0, when = time_close == 1516903200000)
+strategy.close("413", when = time_close == 1516910400000)
+
+strategy.order("414", 1, 2.248, 11202.0, when = time_close == 1516824000000)
+strategy.order("414", 1, 0.74184, 11403.0, when = time_close == 1516867200000)
+strategy.close("414", when = time_close == 1516903200000)
+
+strategy.order("415", 0, 1.352, 11478.0, when = time_close == 1516550400000)
+strategy.close("415", when = time_close >= 1516608480000 and time_close - 1516615680000 < 7200000)
+
+strategy.order("416", 0, 2.792, 13601.0, when = time_close == 1516060800000)
+strategy.order("416", 0, 0.92136, 11970.0, when = time_close == 1516118400000)
+strategy.close("416", when = time_close == 1516204800000)
+
+strategy.order("417", 1, 1.752, 14080.0, when = time_close == 1516032000000)
+strategy.close("417", when = time_close >= 1516049700000 and time_close - 1516056900000 < 7200000)
+
+strategy.order("418", 0, 1.088, 13796.0, when = time_close == 1515909600000)
+strategy.order("418", 0, 0.35904, 13270.0, when = time_close == 1515960000000)
+strategy.close("418", when = time_close >= 1516021980000 and time_close - 1516029180000 < 7200000)
+
+strategy.order("419", 1, 0.648, 14339.0, when = time_close == 1515830400000)
+strategy.close("419", when = time_close >= 1515904620000 and time_close - 1515911820000 < 7200000)
+
+strategy.order("420", 0, 0.56, 15624.0, when = time_close == 1515384000000)
+strategy.order("420", 0, 0.18480000000000002, 14764.0, when = time_close == 1515434400000)
+strategy.close("420", when = time_close == 1515830400000)
+
+strategy.order("421", 1, 0.92, 13946.0, when = time_close == 1514901600000)
+strategy.order("421", 1, 0.30360000000000004, 14823.0, when = time_close == 1514944800000)
+strategy.close("421", when = time_close == 1515384000000)
+
+strategy.order("422", 0, 0.6, 13281.0, when = time_close == 1514772000000)
+strategy.close("422", when = time_close >= 1514788020000 and time_close - 1514795220000 < 7200000)

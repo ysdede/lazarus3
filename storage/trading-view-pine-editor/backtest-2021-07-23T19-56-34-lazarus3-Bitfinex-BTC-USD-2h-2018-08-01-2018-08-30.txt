@@ -1,0 +1,35 @@
+//@version=4
+strategy("backtest-2021-07-23T19-56-34-lazarus3-Bitfinex-BTC-USD-2h-2018-08-01-2018-08-30", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.2)
+
+strategy.order("0", 1, 0.715, 6527.2, when = time_close == 1535068800000)
+strategy.close("0", when = time_close == 1535587200000)
+
+strategy.order("1", 0, 0.74, 6368.3, when = time_close == 1534975200000)
+strategy.close("1", when = time_close >= 1535062080000 and time_close - 1535069280000 < 7200000)
+
+strategy.order("2", 1, 0.74, 6425.0, when = time_close == 1534867200000)
+strategy.close("2", when = time_close == 1534975200000)
+
+strategy.order("3", 0, 0.77, 6255.9, when = time_close == 1534809600000)
+strategy.close("3", when = time_close >= 1534835520000 and time_close - 1534842720000 < 7200000)
+
+strategy.order("4", 1, 0.755, 6495.4, when = time_close == 1534716000000)
+strategy.close("4", when = time_close >= 1534803360000 and time_close - 1534810560000 < 7200000)
+
+strategy.order("5", 0, 0.785, 6349.3, when = time_close == 1534701600000)
+strategy.close("5", when = time_close >= 1534712160000 and time_close - 1534719360000 < 7200000)
+
+strategy.order("6", 1, 6.385, 6452.4, when = time_close == 1534687200000)
+strategy.close("6", when = time_close == 1534701600000)
+
+strategy.order("7", 0, 4.135, 6339.4, when = time_close == 1534615200000)
+strategy.close("7", when = time_close == 1534687200000)
+
+strategy.order("8", 1, 2.5700000000000003, 6411.4004, when = time_close == 1534320000000)
+strategy.close("8", when = time_close >= 1534375200000 and time_close - 1534382400000 < 7200000)
+
+strategy.order("9", 0, 1.635, 6230.0, when = time_close == 1534183200000)
+strategy.close("9", when = time_close >= 1534306500000 and time_close - 1534313700000 < 7200000)
+
+strategy.order("10", 1, 0.9650000000000001, 6436.4, when = time_close == 1534147200000)
+strategy.close("10", when = time_close >= 1534175640000 and time_close - 1534182840000 < 7200000)

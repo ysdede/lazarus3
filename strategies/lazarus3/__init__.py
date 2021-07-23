@@ -15,7 +15,7 @@ class lazarus3(Strategy):
         self.incr = True            # Martingale like aggressive position sizing.
         self.donchianfilterenabled = False
         self.skipenabled = False    # If last trade was profitable, skip next trade
-        self.dnaindex = 1
+        self.dnaindex = 21
 
         self.dnas = {
             1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
@@ -37,7 +37,8 @@ class lazarus3(Strategy):
             17: {"dna": 'vqopR,]', "tpnl": 372, "tstop": 172, "donlen": 183, "pmpsize": 63, "fast": 3, "slow": 40},
             18: {"dna": 'vaQpJ;g', "tpnl": 296, "tstop": 103, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
             19: {"dna": 'v^JpF/U', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 38},
-            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
+            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
+            21: {"dna": 'Custom1', "tpnl": 296, "tstop": 24, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
         }
 
     @property
@@ -80,7 +81,7 @@ class lazarus3(Strategy):
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 18 * numberofroutes
+        return 10 * numberofroutes
 
     @property
     @cached

@@ -3,7 +3,7 @@ from jesse import utils
 import jesse.indicators as ta
 import custom_indicators as cta
 
-class lazarus3(Strategy):
+class lwt(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -11,21 +11,24 @@ class lazarus3(Strategy):
         self.winlimit = 2
         self.lastwasprofitable = False
         self.multiplier = 1
-        self.positionsize = 8
-        self.incr = True
+        self.positionsize = 10
         self.targetpnl = 296
-        self.targetstop = 87
+        self.targetstop = 32  # 24
         self.pumpsize = 47
         self.pumplookback = 3
         self.ewofast = 6
         self.ewoslow = 44
+        self.incr = True
         self.partialexitenabled = True
         self.increasepositionenabled = False
         self.obl = 53
         self.osl = -53
         self.initialqty = 0
         self.exitcounter = 0
-        self.exitpoints = [0.05, 0.35, 0.10]
+        # self.exitpoints = [0.05, 0.35, 0.10]
+        # self.exitpoints = [0.10, 0.50, 0.30]
+        # self.exitpoints = [0.10, 0.40, 0.40]
+        self.exitpoints = [0.31, 0.61]
         self.limit = 4
         self.carpan = 0.66
 
@@ -52,7 +55,7 @@ class lazarus3(Strategy):
         open = self.candles[:, 1][-self.pumplookback]
         close = self.candles[:, 2][-1]
         multibardildo = abs(open - close) * 100 / open > self.pumpsize / 10
-        return self.is_dildo(-1) or self.is_dildo(-2) or self.is_dildo(-3) or self.is_dildo(-4) or multibardildo
+        return multibardildo or self.is_dildo(-1) or self.is_dildo(-2) or self.is_dildo(-3) # or self.is_dildo(-4)
 
     # Wavetrend funcs. -------------->
     @property
@@ -161,7 +164,7 @@ class lazarus3(Strategy):
         self.lastwasprofitable = False
         self.losecount += 1
         self.wincount = 0
-        self.multiplier = self.multiplier * (1 + (self.carpan))
+        self.multiplier = self.multiplier * (1 + self.carpan)
 
     def on_take_profit(self, order):
         self.lastwasprofitable = True
