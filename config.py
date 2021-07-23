@@ -10,7 +10,7 @@ config = {
         'postgres_name': 'jesse_db',
         'postgres_port': 5432,
         'postgres_username': 'jesse_user',
-        'postgres_password': 'password@€',
+        'postgres_password': 'password',
     },
 
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -45,7 +45,7 @@ config = {
             # accepted values are: 'cross' and 'isolated'
             'futures_leverage_mode': 'cross',
             # 1x, 2x, 10x, 50x, etc. Enter as integers
-            'futures_leverage': 8,
+            'futures_leverage': 5,
 
             'assets': [
                 {'asset': 'USDT', 'balance': 0},

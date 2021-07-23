@@ -4,7 +4,7 @@ import jesse.indicators as ta
 from jesse.services.selectors import get_all_trading_routes
 
 
-class lazarus3(Strategy):
+class lzfilter(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -80,7 +80,7 @@ class lazarus3(Strategy):
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 18 * numberofroutes
+        return 8 * numberofroutes
 
     @property
     @cached
@@ -115,13 +115,15 @@ class lazarus3(Strategy):
         dc = True
         if self.donchianfilterenabled:
             dc = self.close >= self.entry_donchian[1]
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump and dc
+        fil = self.close >= ta.t3(self.candles, 38)
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump and dc and fil
 
     def should_short(self) -> bool:
         dc = True
         if self.donchianfilterenabled:
             dc = self.close <= self.entry_donchian[1]
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump and dc
+        fil = self.close <= ta.t3(self.candles, 38)
+        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump and dc and fil
 
     @property
     def calcqty(self):

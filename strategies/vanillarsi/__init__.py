@@ -4,7 +4,7 @@ import jesse.indicators as ta
 from jesse.services.selectors import get_all_trading_routes
 
 
-class lazarus3(Strategy):
+class vanillarsi(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -18,7 +18,7 @@ class lazarus3(Strategy):
         self.dnaindex = 1
 
         self.dnas = {
-            1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
+            1: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 33, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
             2: {"dna": 'vaJpp;g', "tpnl": 296, "tstop": 87, "donlen": 183, "pmpsize": 93, "fast": 6, "slow": 44},
             3: {"dna": 'vXJp.._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 26, "fast": 3, "slow": 41},
             4: {"dna": 'vXJp5._', "tpnl": 253, "tstop": 87, "donlen": 183, "pmpsize": 33, "fast": 3, "slow": 41},
@@ -37,7 +37,8 @@ class lazarus3(Strategy):
             17: {"dna": 'vqopR,]', "tpnl": 372, "tstop": 172, "donlen": 183, "pmpsize": 63, "fast": 3, "slow": 40},
             18: {"dna": 'vaQpJ;g', "tpnl": 296, "tstop": 103, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
             19: {"dna": 'v^JpF/U', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 38},
-            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
+            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
+            21: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 33, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
         }
 
     @property
@@ -80,7 +81,7 @@ class lazarus3(Strategy):
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 18 * numberofroutes
+        return 8 * numberofroutes
 
     @property
     @cached
@@ -96,6 +97,11 @@ class lazarus3(Strategy):
     @cached
     def fast_ema(self):
         return ta.ema(self.candles, self.ewofast, sequential=True)
+
+    @property
+    @cached
+    def rsi(self):
+        return ta.rsi(self.candles, 20)
 
     @cached
     def isdildo(self, index):
@@ -115,13 +121,13 @@ class lazarus3(Strategy):
         dc = True
         if self.donchianfilterenabled:
             dc = self.close >= self.entry_donchian[1]
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='above', sequential=False) and not self.dumpump and dc
+        return self.rsi < 25 and not self.dumpump and dc
 
     def should_short(self) -> bool:
         dc = True
         if self.donchianfilterenabled:
             dc = self.close <= self.entry_donchian[1]
-        return utils.crossed(self.fast_ema, self.slow_ema, direction='below', sequential=False) and not self.dumpump and dc
+        return self.rsi > 80 and not self.dumpump and dc
 
     @property
     def calcqty(self):
@@ -145,11 +151,23 @@ class lazarus3(Strategy):
         self.stop_loss = qty, self.price + (self.price * sl)
 
     def update_position(self):
-        if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
+        if False and self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
+            print('\n-------> targetpnl hit! ', round(self.position.pnl_percentage, 2), '%', round(self.position.pnl_percentage/self.position.leverage, 2), '%', round(self.position.pnl, 2), '$')
             self.liquidate()
 
         # c. Emergency exit! Close position at trend reversal
-        if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
+        # if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
+            # print('\n+++++++> Trend Reversal! ', round(self.position.pnl_percentage, 2), '%',
+            #       round(self.position.pnl_percentage / self.position.leverage, 2), '%', round(self.position.pnl, 2),
+            #       '$')
+        #     self.liquidate()
+
+        if self.is_long and self.rsi > 75:
+            # print(' RSI LONG EXIT')
+            self.liquidate()
+
+        if self.is_short and self.rsi < 25:
+            # print(' RSI SHORT EXIT')
             self.liquidate()
 
     def on_stop_loss(self, order):

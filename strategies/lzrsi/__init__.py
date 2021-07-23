@@ -4,7 +4,7 @@ import jesse.indicators as ta
 from jesse.services.selectors import get_all_trading_routes
 
 
-class lazarus3(Strategy):
+class lzrsi(Strategy):
     def __init__(self):
         super().__init__()
         self.losecount = 0
@@ -37,7 +37,8 @@ class lazarus3(Strategy):
             17: {"dna": 'vqopR,]', "tpnl": 372, "tstop": 172, "donlen": 183, "pmpsize": 63, "fast": 3, "slow": 40},
             18: {"dna": 'vaQpJ;g', "tpnl": 296, "tstop": 103, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
             19: {"dna": 'v^JpF/U', "tpnl": 281, "tstop": 87, "donlen": 183, "pmpsize": 50, "fast": 4, "slow": 38},
-            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44}
+            20: {"dna": 'vahpJ;g', "tpnl": 296, "tstop": 156, "donlen": 183, "pmpsize": 54, "fast": 6, "slow": 44},
+            21: {"dna": 'vaJpC;g', "tpnl": 296, "tstop": 33, "donlen": 183, "pmpsize": 47, "fast": 6, "slow": 44},
         }
 
     @property
@@ -80,7 +81,7 @@ class lazarus3(Strategy):
     @cached
     def positionsize(self):
         numberofroutes = len(get_all_trading_routes())
-        return 18 * numberofroutes
+        return 8 * numberofroutes
 
     @property
     @cached
@@ -146,10 +147,22 @@ class lazarus3(Strategy):
 
     def update_position(self):
         if self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
+            print('\n-------> targetpnl hit! ', round(self.position.pnl_percentage, 2), '%', round(self.position.pnl_percentage/self.position.leverage, 2), '%', round(self.position.pnl, 2), '$')
             self.liquidate()
 
         # c. Emergency exit! Close position at trend reversal
         if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
+            # print('\n+++++++> Trend Reversal! ', round(self.position.pnl_percentage, 2), '%',
+            #       round(self.position.pnl_percentage / self.position.leverage, 2), '%', round(self.position.pnl, 2),
+            #       '$')
+            self.liquidate()
+
+        if self.is_long and ta.rsi(self.candles, 20) > 85:
+            print('RSI LONG')
+            self.liquidate()
+
+        if self.is_short and ta.rsi(self.candles, 20) < 15:
+            print('RSI SHORT')
             self.liquidate()
 
     def on_stop_loss(self, order):
