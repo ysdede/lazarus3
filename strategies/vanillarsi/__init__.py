@@ -151,15 +151,6 @@ class vanillarsi(Strategy):
         self.stop_loss = qty, self.price + (self.price * sl)
 
     def update_position(self):
-        if False and self.position.pnl_percentage / self.position.leverage > (self.targetpnl / 10):
-            print('\n-------> targetpnl hit! ', round(self.position.pnl_percentage, 2), '%', round(self.position.pnl_percentage/self.position.leverage, 2), '%', round(self.position.pnl, 2), '$')
-            self.liquidate()
-
-        # c. Emergency exit! Close position at trend reversal
-        # if utils.crossed(self.fast_ema, self.slow_ema, sequential=False):
-            # print('\n+++++++> Trend Reversal! ', round(self.position.pnl_percentage, 2), '%',
-            #       round(self.position.pnl_percentage / self.position.leverage, 2), '%', round(self.position.pnl, 2),
-            #       '$')
         #     self.liquidate()
 
         if self.is_long and self.rsi > 75:

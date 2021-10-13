@@ -154,10 +154,9 @@ class lwt(Strategy):
 
     # Partial Exit Func.
     def partial_liq(self):
-        if self.exitcounter < len(self.exitpoints) - 1:
-            if self.position.pnl > 0:
-                self.take_profit = self.initialqty * self.exitpoints[self.exitcounter], self.position.current_price
-                self.exitcounter += 1
+        if self.exitcounter < len(self.exitpoints) - 1 and self.position.pnl > 0:
+            self.take_profit = self.initialqty * self.exitpoints[self.exitcounter], self.position.current_price
+            self.exitcounter += 1
     # -----------------
 
     def on_stop_loss(self, order):
